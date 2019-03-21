@@ -36,16 +36,19 @@ def import_node(name, newname, froms=None):
 
 def obfuscate_string(s):
     """Various String Obfuscation routines."""
+    # Vars we might use
     var1 = random_string(20, 20)
     var2 = random_string(20, 20)
 
     random_bytes = os.urandom(len(s))
 
+    # For xor combining two bytestrings
     pair1 = random_bytes
     pair2 = bytes([
         x ^ y for x, y in zip(random_bytes, s.encode('utf-8'))
     ])
 
+    # Divisor for filtering into an empty list
     random_divisor = random.randint(2, 6)
 
     chars = list(filter(lambda x: ord(x) % random_divisor == 0, [chr(x) for x in range(0, 126)]))
@@ -138,13 +141,12 @@ class Obfuscator(ast.NodeTransformer):
         return newname
 
     def obfuscate_local(self, name):
+        # Rename the variable in the closest-in local namespace
         newname = random_string(20, 20)
         self.locs[0][name] = newname
         return newname
 
     def get_name(self, name):
-        globalname = name = self.globs.get(name, name)
-
         found_local = False
 
         # Loop through and try to find a local var in the closest containing namespace
@@ -161,10 +163,12 @@ class Obfuscator(ast.NodeTransformer):
         return name
 
     def visit_Import(self, node):
+        # Add a plain import
         newname = self.obfuscate_global(node.names[0].name)
         self.imports[node.names[0].name] = newname
 
     def visit_ImportFrom(self, node):
+        # Add the module and all the aliases we're importing from it to their respective places
         module_name = self.obfuscate_global(node.module)
         self.from_imports[module_name] = {}
         self.import_aliases[node.module] = module_name
@@ -175,6 +179,7 @@ class Obfuscator(ast.NodeTransformer):
         return obfuscate_string(node.s)
 
     def visit_NameConstant(self, node):
+        # Don't mess with None
         if node.value is None:
             return node
 
@@ -185,6 +190,7 @@ class Obfuscator(ast.NodeTransformer):
         value = divisor * multiplicand
 
         if not node.value:
+            # Make it not divisible, and therefore False
             value += random.randint(1, divisor - 1)
         return Compare(left=BinOp(left=Num(n=value), op=Mod(), right=Num(n=divisor)), ops=[Eq()], comparators=[Num(n=0)])
 
@@ -197,11 +203,13 @@ class Obfuscator(ast.NodeTransformer):
             return BinOp(left=Num(left), op=Div(), right=Num(right))
 
         if obfus_type == 1:
+            # 7 to (2 * 3) + 1 or likewise with another divisor
             d = random.randint(2, 6)
             return BinOp(left=BinOp(left=Num(node.n // d), op=Mult(),
                                     right=Num(n=d)),
                          op=Add(), right=Num(node.n % d))
         elif obfus_type == 2 and node.n:
+            # 8 to 2 ^ 10
             random_num = random.getrandbits(node.n.bit_length())
             return BinOp(left=Num(node.n ^ random_num), op=BitXor(), right=Num(random_num))
 
@@ -211,7 +219,7 @@ class Obfuscator(ast.NodeTransformer):
     def visit_ClassDef(self, node):
         self.classes.append(node.name)
 
-        # Don't obfuscate our class
+        # Don't obfuscate our class names or args.
         self.inclass = True
         node.body = [self.visit(x) for x in node.body if x]
         self.inclass = False
@@ -225,15 +233,18 @@ class Obfuscator(ast.NodeTransformer):
             return Call(func=Name(id='getattr', ctx=Load()), args=[
                 Name(id=node.value.id, ctx=Load()), Str(s=node.attr)],
                 keywords=[], starargs=None, kwargs=None)
+        # Visit the value
         node.value = self.visit(node.value)
         return node
 
     def visit_BinOp(self, node):
+        # Visit our left and right
         node.left = self.visit(node.left)
         node.right = self.visit(node.right)
 
+        # Make a lambda expression for the operator, and have a 1/4 chance of using it
+        # This lambda definition will be stuck right at the top of the file in the visit_Module() function
         try:
-            # Make a lambda expression for the operator, and have a 1/4 chance of using it
             if type(node.op) not in self.binary_operators:
                 newname = random_string(20, 20)
                 self.binary_operators[type(node.op)] = newname
@@ -264,10 +275,18 @@ class Obfuscator(ast.NodeTransformer):
     def visit_AugAssign(self, node):
 
         if type(node.target) == Name:
+            # Just replace the name with a non-augmented assignment
+            # x += 3
+            # x = x + 3
             return self.visit(Assign(targets=[Name(node.target.id, ctx=Store())],
                               value=BinOp(left=Name(node.target.id, ctx=Load()), op=node.op, right=node.value)))
         elif type(node.target) == Attribute and type(node.target.value) == Name:
+            # Replace a attribute with a non-augmented assignment
+            # name.attr /= 3
+            # name.attr = name.attr / 3
             attribute = node.target
+
+            # Grab versions of our attribute with both store and reload contexts.
             storeattribute = copy.deepcopy(attribute)
 
             loadattribute = copy.deepcopy(attribute)
@@ -283,6 +302,7 @@ class Obfuscator(ast.NodeTransformer):
             return self.visit(Assign(targets=[storeattribute],
                                      value=BinOp(left=loadattribute, op=node.op, right=node.value)))
         else:
+            # I don't wont to go through all the possible cases, leave as-is
             node.value = self.visit(node.value)
 
             return node
@@ -290,8 +310,9 @@ class Obfuscator(ast.NodeTransformer):
     def visit_Assign(self, node):
         node.value = self.visit(node.value)
 
-        if type(node.targets[0]) != Attribute:
-            node.targets = [self.visit(x) for x in node.targets]
+        # Visit the targets if they're not attributes
+        # Visiting an attribute will result in trying to assign to a function call
+        node.targets = [self.visit(x) if type(x) != Attribute else x for x in node.targets]
 
         return node
 
@@ -299,6 +320,8 @@ class Obfuscator(ast.NodeTransformer):
         # Test to see if there's a keyword-only argument specifying that we shouldn't
         # Obfuscate the name and arguments
         no_obfuscate = 'ast_no_obfuscate' in [arg.arg for arg in node.args.kwonlyargs]
+
+        # If we're already in a function definition make sure we don't close out of it
         if self.indef == True:
             already_indef = True
         else:
@@ -308,26 +331,33 @@ class Obfuscator(ast.NodeTransformer):
         # Add a new local namespace for this function
         self.locs.insert(0, {})
 
-        # If we haven't already renamed stuff
+        # If we haven't already renamed stuff, do that
         if not self.renamed:
+            # In a class or not, if the no_obfuscate flag is there, remove it and simply keep the name and args as-is
             if no_obfuscate:
                 self.globs[node.name] = node.name
+                # Purge the undesirable flag for no obfuscation
                 node.args.kwonlyargs = list(filter(lambda arg: arg.arg != 'ast_no_obfuscate', node.args.kwonlyargs))
+
+            # If we're not in a class and allowed to obfuscate, do both name and args
             elif not self.inclass:
                     node.name = self.obfuscate_global(node.name)
                     for arg in node.args.args:
                         arg.arg = self.obfuscate_local(arg.arg)
-            # Only rename args
+
+            # If we're in a class, only rename args
             elif self.inclass:
                 for arg in node.args.args:
                     arg.arg = self.obfuscate_local(arg.arg)
 
+        # Visit the function body, possibly recursing into another definition
         node.body = [self.visit(x) for x in node.body]
 
         # Handle nested function defs
         if not already_indef:
             self.indef = False
 
+        # Remove our function namespace
         self.locs.pop(0)
         return node
 
@@ -400,9 +430,9 @@ if __name__ == '__main__':
         exit(0)
 
     if len(sys.argv) == 4:
-        layers = int(sys.argv[3])
+        passes = int(sys.argv[3])
     else:
-        layers = 1
+        passes = 1
 
     if sys.argv[1] == '-':
         root = ast.parse(sys.stdin.read())
@@ -415,7 +445,7 @@ if __name__ == '__main__':
         file_obj = open(sys.argv[2], 'w')
 
     # obfuscate the AST
-    obf = Obfuscator(passes=layers)
+    obf = Obfuscator(passes=passes)
     root = obf.visit(root)
 
     # resolve all global names
