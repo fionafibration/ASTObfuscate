@@ -41,7 +41,10 @@ Run ASTObfuscate on the source code once.
 
 In Python source:
 
-```def function_to_remain(arg1, arg2, arg3, *remaining, ast_no_obfuscate=None):```
+```python
+def function_to_remain(arg1, arg2, arg3, *remaining, ast_no_obfuscate=None):
+    pass
+```
 
 Tell ASTObfuscate that a function's name and arguments should remain the same and not be changed. All other functions will be renamed and have their arguments obfuscated
 
