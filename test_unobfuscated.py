@@ -39,8 +39,17 @@ else:
     print('I see how it is!')
 
 x = 57
-print(x, Data.add_2_class(x), Data().add_2_instance(x), Data().add_2_static(x), add_2_nested(x, None), x // 2, 0.1 + 0.2)
-print('Expected: 57 59 59 59 59 28 0.30000...4\n')
+print(x, Data.add_2_class(x), Data().add_2_instance(x), Data().add_2_static(x), add_2_nested(x, None), x // 2, 0.1 + 0.2, ~2)
+print('Expected: 57 59 59 59 59 28 0.30000...4 -3\n')
+
+x += 15
+print(x)
+print('Expected: 72\n')
+
+Data.internal += 1
+
+print(x, Data.add_2_class(x), Data().add_2_instance(x), Data().add_2_static(x), add_2_nested(x, None))
+print('Expected: 72 75 75 74 74\n')
 
 print(True, True, True, True, True)
 print('Expected: True True True True True\n')

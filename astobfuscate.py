@@ -1,13 +1,10 @@
 import ast
 from ast import *
-from collections import namedtuple
 import astor.code_gen
-import pyminifier.minification
-import pyminifier.token_utils
 import random
 import os
 import sys
-import time
+import copy
 
 
 def random_string(minlength, maxlength):
@@ -116,7 +113,9 @@ class Obfuscator(ast.NodeTransformer):
         self.locs = []
 
         # Obfuscated operators
-        self.operators = {}
+        self.binary_operators = {}
+
+        self.unary_operators = {}
 
         # List of classes
         self.classes = []
@@ -142,6 +141,24 @@ class Obfuscator(ast.NodeTransformer):
         newname = random_string(20, 20)
         self.locs[0][name] = newname
         return newname
+
+    def get_name(self, name):
+        globalname = name = self.globs.get(name, name)
+
+        found_local = False
+
+        # Loop through and try to find a local var in the closest containing namespace
+        for local_namespace in self.locs:
+            if name in local_namespace:
+                name = local_namespace[name]
+                found_local = True
+                break
+
+        # Otherwise fall back to global variables
+        if not found_local:
+            name = self.globs.get(name, name)
+
+        return name
 
     def visit_Import(self, node):
         newname = self.obfuscate_global(node.names[0].name)
@@ -217,16 +234,66 @@ class Obfuscator(ast.NodeTransformer):
 
         try:
             # Make a lambda expression for the operator, and have a 1/4 chance of using it
-            if type(node.op) not in self.operators:
+            if type(node.op) not in self.binary_operators:
                 newname = random_string(20, 20)
-                self.operators[type(node.op)] = newname
+                self.binary_operators[type(node.op)] = newname
             if random.randint(1, 4) == 1:
-                name = self.operators[type(node.op)]
+                name = self.binary_operators[type(node.op)]
                 return Call(func=Name(self.globs.get(name, name), ctx=Load()), args=[node.left, node.right], keywords=[])
             else:
                 return node
         except:
             return node
+
+    def visit_UnaryOp(self, node):
+        node.operand = self.visit(node.operand)
+
+        # Basically the same as BinOp
+        try:
+            if type(node.op) not in self.unary_operators:
+                newname = random_string(20, 20)
+                self.unary_operators[type(node.op)] = newname
+            if random.randint(1, 2) == 1:
+                name = self.unary_operators[type(node.op)]
+                return Call(func=Name(self.get_name(name), ctx=Load()), args=[node.operand], keywords=[])
+            else:
+                return node
+        except:
+            return node
+
+    def visit_AugAssign(self, node):
+
+        if type(node.target) == Name:
+            return self.visit(Assign(targets=[Name(node.target.id, ctx=Store())],
+                              value=BinOp(left=Name(node.target.id, ctx=Load()), op=node.op, right=node.value)))
+        elif type(node.target) == Attribute and type(node.target.value) == Name:
+            attribute = node.target
+            storeattribute = copy.deepcopy(attribute)
+
+            loadattribute = copy.deepcopy(attribute)
+
+            storeattribute.ctx = Store()
+
+            loadattribute.ctx = Load()
+
+            storeattribute.value.ctx = Load()
+
+            loadattribute.value.ctx = Load()
+
+            return self.visit(Assign(targets=[storeattribute],
+                                     value=BinOp(left=loadattribute, op=node.op, right=node.value)))
+        else:
+            node.value = self.visit(node.value)
+
+            return node
+
+    def visit_Assign(self, node):
+        node.value = self.visit(node.value)
+
+        if type(node.targets[0]) != Attribute:
+            node.targets = [self.visit(x) for x in node.targets]
+
+        return node
 
     def visit_FunctionDef(self, node):
         # Test to see if there's a keyword-only argument specifying that we shouldn't
@@ -272,20 +339,7 @@ class Obfuscator(ast.NodeTransformer):
             if self.indef and node.id not in self.locs[0]:
                 node.id = self.obfuscate_local(node.id)
 
-        globalname = node.id = self.globs.get(node.id, node.id)
-
-        found_local = False
-
-        # Loop through and try to find a local var in the closest containing namespace
-        for local_namespace in self.locs:
-            if node.id in local_namespace:
-                node.id = local_namespace[node.id]
-                found_local = True
-                break
-
-        # Otherwise fall back to global variables
-        if not found_local:
-            node.id = self.globs.get(node.id, node.id)
+        node.id = self.get_name(node.id)
 
         return node
 
@@ -315,12 +369,18 @@ class Obfuscator(ast.NodeTransformer):
         node.body = [self.visit(x) for x in node.body]
 
         # Add lambdas for each obfuscated operator
-        for operator, newname in self.operators.items():
+        for operator, newname in self.binary_operators.items():
             arg1 = random_string(20, 20)
             arg2 = random_string(20, 20)
             node.body.insert(0, Assign(targets=[Name(id=newname, ctx=Store())],
                                        value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
                                                     body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load())))))
+
+        for operator, newname in self.unary_operators.items():
+            arg1 = random_string(20, 20)
+            node.body.insert(0, Assign(targets=[Name(id=newname, ctx=Store())],
+                                       value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
+                                                    body=UnaryOp(operand=Name(arg1, ctx=Load()), op=operator()))))
 
         return node
 
