@@ -108,14 +108,20 @@ class Obfuscator(ast.NodeTransformer):
         # global values (can be renamed)
         self.globs = {}
 
-        # local values
-        self.locs = {}
+        # local variables
+        self.locs = []
 
         # Obfuscated operators
         self.operators = {}
 
+        # List of classes
+        self.classes = []
+
         # inside a function
         self.indef = False
+
+        # Inside a class
+        self.inclass = False
 
         self.layers = layers
 
@@ -128,7 +134,7 @@ class Obfuscator(ast.NodeTransformer):
 
     def obfuscate_local(self, name):
         newname = random_string(20, 20)
-        self.locs[name] = newname
+        self.locs[0][name] = newname
         return newname
 
     def visit_Import(self, node):
@@ -159,6 +165,15 @@ class Obfuscator(ast.NodeTransformer):
         else:
             return node
 
+    def visit_ClassDef(self, node):
+        self.classes.append(node.name)
+
+        self.inclass = True
+        node.body = [self.visit(x) for x in node.body if x]
+        self.inclass = False
+
+        return node
+
     def visit_Attribute(self, node):
         if isinstance(node.value, Name) and isinstance(node.value.ctx, Load):
             node.value = self.visit(node.value)
@@ -185,37 +200,75 @@ class Obfuscator(ast.NodeTransformer):
             return node
 
     def visit_FunctionDef(self, node):
+        # Test to see if there's a keyword-only argument specifying that we shouldn't
+        # Obfuscate the name and arguments
+        no_obfuscate = 'ast_no_obfuscate' in [arg.arg for arg in node.args.kwonlyargs]
+        if self.indef == True:
+            already_indef = True
+        else:
+            already_indef = False
         self.indef = True
-        self.locs = {}
-        node.name = self.obfuscate_global(node.name)
+        self.locs.insert(0, {})
+
+        # If we haven't already renamed stuff
+        if not self.renamed:
+            if no_obfuscate:
+                self.globs[node.name] = node.name
+                node.args.kwonlyargs = list(filter(lambda arg: arg.arg != 'ast_no_obfuscate', node.args.kwonlyargs))
+            elif not self.inclass:
+                    node.name = self.obfuscate_global(node.name)
+                    for arg in node.args.args:
+                        arg.arg = self.obfuscate_local(arg.arg)
+
+            elif self.inclass:
+                for arg in node.args.args:
+                    arg.arg = self.obfuscate_local(arg.arg)
+
         node.body = [self.visit(x) for x in node.body]
-        self.indef = False
+
+        if not already_indef:
+            self.indef = False
+
+        self.locs.pop(0)
         return node
 
     def visit_Name(self, node):
-        # obfuscate known globals
-        if not self.indef and not self.renamed and isinstance(node.ctx, Store) and node.id not in self.globs:
-            node.id = self.obfuscate_global(node.id)
-        #elif self.indef:
-        #    if isinstance(node.ctx, Store):
-        #        node.id = self.obfuscate_local(node.id)
-        #    node.id = self.locs.get(node.id, node.id)
-        node.id = self.globs.get(node.id, node.id)
+        # obfuscate known globals and locals
+        if not self.renamed and not self.inclass and isinstance(node.ctx, Store):
+            if not self.indef and node.id not in self.globs:
+                node.id = self.obfuscate_global(node.id)
+            if self.indef and node.id not in self.locs[0]:
+                node.id = self.obfuscate_local(node.id)
+
+        globalname = node.id = self.globs.get(node.id, node.id)
+
+        found_local = False
+
+        for local_namespace in self.locs:
+            if node.id in local_namespace:
+                node.id = local_namespace[node.id]
+                found_local = True
+                break
+
+        if not found_local:
+            node.id = self.globs.get(node.id, node.id)
+
         return node
 
     def visit_Module(self, node):
+
+        # Run our obfuscation layers times
         for i in range(self.layers):
             node.body = [y for y in (self.visit(x) for x in node.body) if y]
             self.renamed = True
 
-        for operator, newname in self.operators.items():
-            arg1 = random_string(20, 20)
-            arg2 = random_string(20, 20)
-            node.body.insert(0, Assign(targets=[Name(id=newname, ctx=Store())],
-                                       value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load())))))
+        # Add imports
         for name, newname in self.imports.items():
             node.body.insert(0, import_node(name, newname))
 
+        # Add imports with specific names import
+        # E.G:
+        # from math import log, sqrt
         for name, newname in self.import_aliases.items():
             for alias in self.from_imports[newname].keys():
                 node.body.insert(0, Assign(targets=[Name(id=self.from_imports[newname][alias], ctx=Store())],
@@ -225,16 +278,16 @@ class Obfuscator(ast.NodeTransformer):
                                            )))
             node.body.insert(0, import_node(name, newname, self.from_imports[newname].keys()))
 
-        def no_lambda(node):
-            try:
-                if type(node) == Assign and node.targets[0].id in self.operators.values():
-                    return False
-                else:
-                    return True
-            except:
-                return True
+        node.body = [self.visit(x) for x in node.body]
 
-        node.body = [self.visit(x) if no_lambda(x) else x for x in node.body]
+        # Add lambdas for each obfuscated operator
+        for operator, newname in self.operators.items():
+            arg1 = random_string(20, 20)
+            arg2 = random_string(20, 20)
+            node.body.insert(0, Assign(targets=[Name(id=newname, ctx=Store())],
+                                       value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
+                                                    body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load())))))
+
         return node
 
 
