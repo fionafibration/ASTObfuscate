@@ -47,7 +47,7 @@ Tell ASTObfuscate that a function's name and arguments should remain the same an
 
 ### Possible improvements:
 * Add a function to turn the entire program into a single line of code, likely using csvoss's [onelinerizer](https://github.com/csvoss/onelinerizer). This approach will likely fail
-if the program needs to have functions or classes imported.
+if the program needs to have functions or classes exported.
 
 * Add more ways for integers, strings, and booleans to be obfuscated. This would add more variation to the generated code.
 
