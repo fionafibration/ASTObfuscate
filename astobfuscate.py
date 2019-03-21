@@ -11,6 +11,10 @@ import time
 
 
 def random_string(minlength, maxlength):
+    """
+    Horrifying variable names consisting entirely of lookalikes:
+    Digit ones, lowercase els, digit zeroes, uppercase ohs
+    """
     return random.choice('lO') + ''.join(random.choice('lO10') for _ in range(random.randint(minlength, maxlength)))
 
 
@@ -20,7 +24,7 @@ def import_node(name, newname, froms=None):
     else:
         froms = []
     """Import module obfuscation"""
-    # import sys -> sys = __import__('sys', globals(), locals(), [], -1)
+    # import sys -> sys = __import__('sys', globals(), locals(), [], 0)
     return Assign(
         targets=[Name(id=newname, ctx=Store())],
         value=Call(func=Name(id='__import__', ctx=Load()),
@@ -56,7 +60,7 @@ def obfuscate_string(s):
     table0 = [
         # '' -> ''
         lambda: Str(s=''),
-
+        # Filter out all characters whose ascii values aren't divisible by a certain value, leaving an empty string
         lambda: Call(func=Attribute(value=Str(s=''), attr='join', ctx=Load()), args=[Call(func=Name(id='filter', ctx=Load()), args=[Lambda(args=arguments(args=[arg(arg=var1, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=Compare(left=BinOp(left=Call(func=Name(id='ord', ctx=Load()), args=[Name(id=var1, ctx=Load())], keywords=[]), op=Mod(), right=Num(n=random_divisor)), ops=[NotEq()], comparators=[Num(n=0)])), Bytes(s=list_of_chars)], keywords=[])], keywords=[])
     ]
 
@@ -78,10 +82,10 @@ def obfuscate_string(s):
                             slice=Slice(lower=None, upper=None,
                                         step=Num(n=-1)),
                             ctx=Load()),
-
+        # xor two bytestrings together in a list comprehension
         lambda x: Call(func=Attribute(value=Str(s=''), attr='join', ctx=Load()), args=[GeneratorExp(elt=Call(func=Name(id='chr', ctx=Load()), args=[BinOp(left=Name(id=var1, ctx=Load()), op=BitXor(), right=Name(id=var2, ctx=Load()))], keywords=[]), generators=[comprehension(target=Tuple(elts=[Name(id=var2, ctx=Store()), Name(id=var1, ctx=Store())], ctx=Store()), iter=Call(func=Name(id='zip', ctx=Load()), args=[Bytes(s=pair1), Bytes(s=pair2)], keywords=[]), ifs=[], is_async=0)])], keywords=[])
     ]
-    # Make it much more likely for it to be a bitwise xor
+    # Make it much more likely for it to be a bitwise xor. They are much more difficult to understand.
     table.extend([table[2]] * 2)
     if not len(s):
         return random.choice(table0)()
@@ -93,7 +97,7 @@ def obfuscate_string(s):
 
 
 class Obfuscator(ast.NodeTransformer):
-    def __init__(self, layers=1):
+    def __init__(self, passes=1):
         ast.NodeTransformer.__init__(self)
 
         # imported modules
@@ -123,8 +127,10 @@ class Obfuscator(ast.NodeTransformer):
         # Inside a class
         self.inclass = False
 
-        self.layers = layers
+        # Number of passes to perform
+        self.passes = passes
 
+        # Whether we've renamed variables yet.
         self.renamed = False
 
     def obfuscate_global(self, name):
@@ -151,14 +157,35 @@ class Obfuscator(ast.NodeTransformer):
     def visit_Str(self, node):
         return obfuscate_string(node.s)
 
+    def visit_NameConstant(self, node):
+        if node.value is None:
+            return node
+
+        # Replace with a x % y == 0
+        divisor = random.randint(2, 16)
+        multiplicand = random.randint(4, 8)
+
+        value = divisor * multiplicand
+
+        if not node.value:
+            value += random.randint(1, divisor - 1)
+        return Compare(left=BinOp(left=Num(n=value), op=Mod(), right=Num(n=divisor)), ops=[Eq()], comparators=[Num(n=0)])
+
     def visit_Num(self, node):
-        type = random.randint(1, 3)
-        if type == 1:
+        obfus_type = random.randint(1, 3)
+
+        if type(node.n) == float:
+            # No floating point obfuscation yet
+            # Maybe one based one
+            return node
+
+
+        if obfus_type == 1:
             d = random.randint(2, 6)
             return BinOp(left=BinOp(left=Num(node.n // d), op=Mult(),
                                     right=Num(n=d)),
                          op=Add(), right=Num(node.n % d))
-        elif type == 2 and node.n:
+        elif obfus_type == 2 and node.n:
             random_num = random.getrandbits(node.n.bit_length())
             return BinOp(left=Num(node.n ^ random_num), op=BitXor(), right=Num(random_num))
 
@@ -168,6 +195,7 @@ class Obfuscator(ast.NodeTransformer):
     def visit_ClassDef(self, node):
         self.classes.append(node.name)
 
+        # Don't obfuscate our class
         self.inclass = True
         node.body = [self.visit(x) for x in node.body if x]
         self.inclass = False
@@ -175,6 +203,7 @@ class Obfuscator(ast.NodeTransformer):
         return node
 
     def visit_Attribute(self, node):
+        # Replace with a call to getattr()
         if isinstance(node.value, Name) and isinstance(node.value.ctx, Load):
             node.value = self.visit(node.value)
             return Call(func=Name(id='getattr', ctx=Load()), args=[
@@ -188,6 +217,7 @@ class Obfuscator(ast.NodeTransformer):
         node.right = self.visit(node.right)
 
         try:
+            # Make a lambda expression for the operator, and have a 1/4 chance of using it
             if type(node.op) not in self.operators:
                 newname = random_string(20, 20)
                 self.operators[type(node.op)] = newname
@@ -208,6 +238,8 @@ class Obfuscator(ast.NodeTransformer):
         else:
             already_indef = False
         self.indef = True
+
+        # Add a new local namespace for this function
         self.locs.insert(0, {})
 
         # If we haven't already renamed stuff
@@ -219,13 +251,14 @@ class Obfuscator(ast.NodeTransformer):
                     node.name = self.obfuscate_global(node.name)
                     for arg in node.args.args:
                         arg.arg = self.obfuscate_local(arg.arg)
-
+            # Only rename args
             elif self.inclass:
                 for arg in node.args.args:
                     arg.arg = self.obfuscate_local(arg.arg)
 
         node.body = [self.visit(x) for x in node.body]
 
+        # Handle nested function defs
         if not already_indef:
             self.indef = False
 
@@ -244,12 +277,14 @@ class Obfuscator(ast.NodeTransformer):
 
         found_local = False
 
+        # Loop through and try to find a local var in the closest containing namespace
         for local_namespace in self.locs:
             if node.id in local_namespace:
                 node.id = local_namespace[node.id]
                 found_local = True
                 break
 
+        # Otherwise fall back to global variables
         if not found_local:
             node.id = self.globs.get(node.id, node.id)
 
@@ -258,7 +293,7 @@ class Obfuscator(ast.NodeTransformer):
     def visit_Module(self, node):
 
         # Run our obfuscation layers times
-        for i in range(self.layers):
+        for i in range(self.passes):
             node.body = [y for y in (self.visit(x) for x in node.body) if y]
             self.renamed = True
 
@@ -321,7 +356,7 @@ if __name__ == '__main__':
         file_obj = open(sys.argv[2], 'w')
 
     # obfuscate the AST
-    obf = Obfuscator(layers=layers)
+    obf = Obfuscator(passes=layers)
     root = obf.visit(root)
 
     # resolve all global names

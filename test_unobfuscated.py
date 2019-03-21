@@ -1,5 +1,6 @@
 import getpass
 from os import urandom
+
 name = getpass.win_getpass('What is your name?')
 
 
@@ -38,6 +39,13 @@ else:
     print('I see how it is!')
 
 x = 57
-print(x, Data.add_2_class(x), Data().add_2_instance(x), Data().add_2_static(x), add_2_nested(x, None), x // 2)
-print('Expected: 57 59 59 59 59 28')
+print(x, Data.add_2_class(x), Data().add_2_instance(x), Data().add_2_static(x), add_2_nested(x, None), x // 2, 0.1 + 0.2)
+print('Expected: 57 59 59 59 59 28 0.30000...4\n')
+
+print(True, True, True, True, True)
+print('Expected: True True True True True\n')
+
+print(False, False, False, False, False)
+print('Expected: False False False False False\n')
+
 print('Random byte is: %r' % single_random_byte(None))
