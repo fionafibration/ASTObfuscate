@@ -81,7 +81,8 @@ def obfuscate_string(s):
 
         lambda x: Call(func=Attribute(value=Str(s=''), attr='join', ctx=Load()), args=[GeneratorExp(elt=Call(func=Name(id='chr', ctx=Load()), args=[BinOp(left=Name(id=var1, ctx=Load()), op=BitXor(), right=Name(id=var2, ctx=Load()))], keywords=[]), generators=[comprehension(target=Tuple(elts=[Name(id=var2, ctx=Store()), Name(id=var1, ctx=Store())], ctx=Store()), iter=Call(func=Name(id='zip', ctx=Load()), args=[Bytes(s=pair1), Bytes(s=pair2)], keywords=[]), ifs=[], is_async=0)])], keywords=[])
     ]
-
+    # Make it much more likely for it to be a bitwise xor
+    table.extend([table[2]] * 2)
     if not len(s):
         return random.choice(table0)()
 
@@ -109,6 +110,9 @@ class Obfuscator(ast.NodeTransformer):
 
         # local values
         self.locs = {}
+
+        # Obfuscated operators
+        self.operators = {}
 
         # inside a function
         self.indef = False
@@ -165,36 +169,19 @@ class Obfuscator(ast.NodeTransformer):
         return node
 
     def visit_BinOp(self, node):
-
-        opnames = {
-            Add: 'add',
-            Sub: 'sub',
-            Mult: 'mul',
-            Div: 'truediv',
-            FloorDiv: 'floordiv',
-            Mod: 'mod',
-            Pow: 'pow',
-            BitOr: 'or',
-            BitXor: 'xor',
-            BitAnd: 'and',
-            LShift: 'lshift',
-            RShift: 'rshift',
-        }
-
-        if type(node.left) == Num and type(node.right) == Num:
-            obfuscate_numbers = True
-        else:
-            obfuscate_numbers = False
-
         node.left = self.visit(node.left)
         node.right = self.visit(node.right)
 
-        if obfuscate_numbers:
-            try:
-                return Call(func=Attribute(value=Name(self.globs.get('operator', 'operator'), ctx=Load()), attr=opnames[type(node.op)]), args=[node.left, node.right], keywords=[])
-            except:
+        try:
+            if type(node.op) not in self.operators:
+                newname = random_string(20, 20)
+                self.operators[type(node.op)] = newname
+            if random.randint(1, 4) == 1:
+                name = self.operators[type(node.op)]
+                return Call(func=Name(self.globs.get(name, name), ctx=Load()), args=[node.left, node.right], keywords=[])
+            else:
                 return node
-        else:
+        except:
             return node
 
     def visit_FunctionDef(self, node):
@@ -217,15 +204,15 @@ class Obfuscator(ast.NodeTransformer):
         return node
 
     def visit_Module(self, node):
-        # Import the operator module
-        # This is used for obfuscating binary operations
-        newname = self.obfuscate_global('operator')
-        self.imports['operator'] = newname
-
         for i in range(self.layers):
             node.body = [y for y in (self.visit(x) for x in node.body) if y]
             self.renamed = True
 
+        for operator, newname in self.operators.items():
+            arg1 = random_string(20, 20)
+            arg2 = random_string(20, 20)
+            node.body.insert(0, Assign(targets=[Name(id=newname, ctx=Store())],
+                                       value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load())))))
         for name, newname in self.imports.items():
             node.body.insert(0, import_node(name, newname))
 
@@ -238,8 +225,16 @@ class Obfuscator(ast.NodeTransformer):
                                            )))
             node.body.insert(0, import_node(name, newname, self.from_imports[newname].keys()))
 
+        def no_lambda(node):
+            try:
+                if type(node) == Assign and node.targets[0].id in self.operators.values():
+                    return False
+                else:
+                    return True
+            except:
+                return True
 
-        node.body = [y for y in (self.visit(x) for x in node.body) if y]
+        node.body = [self.visit(x) if no_lambda(x) else x for x in node.body]
         return node
 
 
@@ -254,11 +249,11 @@ class GlobalsEnforcer(ast.NodeTransformer):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         exit(0)
 
-    if len(sys.argv) == 3:
-        layers = int(sys.argv[2])
+    if len(sys.argv) == 4:
+        layers = int(sys.argv[3])
     else:
         layers = 1
 
@@ -267,6 +262,11 @@ if __name__ == '__main__':
     else:
         root = ast.parse(open(sys.argv[1], 'rb').read())
 
+    if sys.argv[2] == '-':
+        file_obj = sys.stdin
+    else:
+        file_obj = open(sys.argv[2], 'w')
+
     # obfuscate the AST
     obf = Obfuscator(layers=layers)
     root = obf.visit(root)
@@ -274,4 +274,6 @@ if __name__ == '__main__':
     # resolve all global names
     root = GlobalsEnforcer(obf.globs).visit(root)
 
-    print(astor.code_gen.to_source(root, indent_with=' '))
+    file_obj.write(astor.code_gen.to_source(root, indent_with=' '))
+
+    file_obj.close()
