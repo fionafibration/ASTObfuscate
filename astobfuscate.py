@@ -175,10 +175,9 @@ class Obfuscator(ast.NodeTransformer):
         obfus_type = random.randint(1, 3)
 
         if type(node.n) == float:
-            # No floating point obfuscation yet
-            # Maybe one based one
-            return node
-
+            # Obfuscate with integer ratio
+            left, right = node.n.as_integer_ratio()
+            return BinOp(left=Num(left), op=Div(), right=Num(right))
 
         if obfus_type == 1:
             d = random.randint(2, 6)

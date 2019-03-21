@@ -53,8 +53,6 @@ if the program needs to have functions or classes imported.
 
 * Class attribute and method obfuscation.
 
-* Floating point obfuscation, likely based on converting from IEEE 754 representation
-
 * Folding of single return statement functions into lambdas
 
 * Lambda namespaces
