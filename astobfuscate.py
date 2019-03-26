@@ -34,6 +34,25 @@ def import_node(name, newname, froms=None):
                    keywords=[], starargs=None, kwargs=None))
 
 
+def obfuscate_binary(operator, newname):
+    arg1 = random_string(20, 20)
+    arg2 = random_string(20, 20)
+    """# Return an operator obfuscated using Mixed Boolean Arithmetic
+    if operator == Add:
+        return random.choice([Assign(targets=[Name(newname, ctx=Store())],
+                                     value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
+                                                  body=BinOp(left=BinOp(left=Name(id=arg1, ctx=Load()), op=BitXor(), right=Name(id=arg2, ctx=Load())), op=Add(), right=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=Name(id=arg1, ctx=Load()), op=BitAnd(), right=Name(id=arg2, ctx=Load())))))),
+
+                              Assign(targets=[Name(newname, ctx=Store())],
+                                     value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
+                                                  body=BinOp(left=BinOp(left=Name(id=arg1, ctx=Load()), op=BitAnd(), right=Name(id=arg2, ctx=Load())), op=Add(), right=BinOp(left=Name(id=arg1, ctx=Load()), op=BitOr(), right=Name(id=arg2, ctx=Load())))))
+                              ])
+    """
+    return Assign(targets=[Name(id=newname, ctx=Store())],
+                  value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
+                               body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load()))))
+
+
 def obfuscate_string(s):
     """Various String Obfuscation routines."""
     # Vars we might use
@@ -197,6 +216,7 @@ class Obfuscator(ast.NodeTransformer):
     def visit_Num(self, node):
         obfus_type = random.randint(1, 3)
 
+
         if type(node.n) == float:
             # Obfuscate with integer ratio
             left, right = node.n.as_integer_ratio()
@@ -238,6 +258,17 @@ class Obfuscator(ast.NodeTransformer):
         return node
 
     def visit_BinOp(self, node):
+        if type(node.left) == Num and type(node.right) == Num:
+            if type(node.left.n) == int and type(node.right.n) == int:
+                if type(node.op) == Add:
+                    # Obfuscate using Mixed Binary Arithmetic
+                    # Only if we can guarantee it's an int
+                    # x + y -> (x & y) + (x | y)
+                    # x + y -> (x ^ y) + 2 * (x & y)
+                    return random.choice([BinOp(left=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitXor(), right=self.visit(copy.deepcopy(node.right))), op=Add(), right=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right))))),
+
+                                          BinOp(left=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right))), op=Add(), right=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitOr(), right=self.visit(copy.deepcopy(node.right))))
+                                          ])
         # Visit our left and right
         node.left = self.visit(node.left)
         node.right = self.visit(node.right)
@@ -400,11 +431,7 @@ class Obfuscator(ast.NodeTransformer):
 
         # Add lambdas for each obfuscated operator
         for operator, newname in self.binary_operators.items():
-            arg1 = random_string(20, 20)
-            arg2 = random_string(20, 20)
-            node.body.insert(0, Assign(targets=[Name(id=newname, ctx=Store())],
-                                       value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
-                                                    body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load())))))
+            node.body.insert(0, obfuscate_binary(operator, newname))
 
         for operator, newname in self.unary_operators.items():
             arg1 = random_string(20, 20)

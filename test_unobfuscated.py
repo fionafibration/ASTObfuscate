@@ -40,7 +40,7 @@ else:
 
 x = 57
 print(x, Data.add_2_class(x), Data().add_2_instance(x), Data().add_2_static(x), add_2_nested(x, None), x // 2, 0.1 + 0.2, ~2)
-print('Expected: 57 59 59 59 59 28 0.30000...4 -3\n')
+print('Expected: 57 59 59 59 59 28 0.30000000000000004 -3\n')
 
 x += 15
 print(x)

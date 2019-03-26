@@ -1,676 +1,417 @@
-lOO1Oll010l11l000O00l = lambda l1O1O1ll1l1Ol00101l0l: ~l1O1O1ll1l1Ol00101l0l
-O10l0l1l0O01l1lOO0l1l = (lambda O1111Olll01lOOlO0O0OO,
-    O011l011lO00ll00001Ol: O1111Olll01lOOlO0O0OO / O011l011lO00ll00001Ol)
-l10lOO11O10ll00lO1l11 = (lambda lO1l0lll0O0l1100O1111,
-    OO1O01111Ol0ll01l00lO: lO1l0lll0O0l1100O1111 * OO1O01111Ol0ll01l00lO)
-O1l1110000000000llOl1 = (lambda l1l01l000O111O0l101O1,
-    l1ll10O0lO1l0ll1O1O0O: l1l01l000O111O0l101O1 ^ l1ll10O0lO1l0ll1O1O0O)
-O1lOlO0l0O1llOlOOO1l1 = (lambda l1ll10Ol111lll0O1ll0l,
-    O0ll1l00lOl1OO10Ol10l: l1ll10Ol111lll0O1ll0l // O0ll1l00lOl1OO10Ol10l)
-lO0l0OOlll1OO01ll0O11 = (lambda l1ll100l1O01011Ol10l1,
-    O1OO10lO0ll00lll1l0O1: l1ll100l1O01011Ol10l1 % O1OO10lO0ll00lll1l0O1)
-lllll100O110lOll1l010 = (lambda lOl0l0O1010Ol00lOl00l,
-    l0O0Ol0OOO0010lO00ll0: lOl0l0O1010Ol00lOl00l + l0O0Ol0OOO0010lO00ll0)
-lO1Ol1l000lO0lO0lO1l0 = __import__('o' + 's', globals(), locals(), ['ura' +
-    'ndom'], 0 * 4 + 0)
-O0011lOlOllOlO1lOOOOl = getattr(lO1Ol1l000lO0lO0lO1l0, 'urandom')
-l0O101ll10Ol11O0lOOl1 = __import__('get' + 'pass', globals(), locals(), [], 0)
-ll1OOllOlOll00O0Ollll = getattr(l0O101ll10Ol11O0lOOl1, ''.join(filter(lambda
-    l1O1OO1Oll0l0O1l1O0lO: ord(l1O1OO1Oll0l0O1l1O0lO) % 2 != 0,
-    '\x04>6&vN\x08Vn\x10\x1ef\x0c("')).join(filter(lambda
-    OO001Ol1l1lO010OO0O0O: ord(OO001Ol1l1lO010OO0O0O) % (2 ^ 6) != 0,
-    'L <@\x10\x00Dd\x14,pd\x00DD')).join(filter(lambda
-    OOOOOOl101l1OO00l1011: lO0l0OOlll1OO01ll0O11(ord(OOOOOOl101l1OO00l1011),
-    (l10lOO11O10ll00lO1l11(0, 5) + O1l1110000000000llOl1(1, 0 * 6 + 0)) *
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, 2), 0 * 3 + 0), 0 ^ 6), l10lOO11O10ll00lO1l11(
-    1, 1 * 3 + 2) + 0) + (l10lOO11O10ll00lO1l11(0 * 4 + 0, 0 ^ 4) + (1 ^ 0)
-    )) != l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11
-    (0 * 3 + 0, 0 ^ 1 ^ (2 ^ 6)), 0 * (2 ^ 7) + 0), 2 ^ 0 * 4 + 0 ^ 0 * 2 +
-    0) + 0, '\x18\x06<T0H\x00\x0c$B$ZZ<\x0c')).join(chr(
-    O0l01OOl1OO1l0O110O01 ^ llO0OlO0l101O0l101lO1) for 
-    llO0OlO0l101O0l101lO1, O0l01OOl1OO1l0O110O01 in zip(
-    b'\x9f\x14O\xa3\xd8\xbf8<"\xe8[', b'\xe8}!\xfc\xbf\xdaLLC\x9b(')))(''.
-    join(filter(lambda ll01ll1010lOl1O001O1l: ord(ll01ll1010lOl1O001O1l) %
-    (l10lOO11O10ll00lO1l11(0 * 2 + 1, lllll100O110lOll1l010(0 * (3 ^ 6), 1 *
-    3 + 1)) + ((0 * 4 + 0) * (0 ^ 3) + 2)) != 0 * (3 ^ 5) + 0,
-    '\x06x\x18\x1e*T\x06$\x1ef<TNB$')).join(filter(lambda
-    l10l1OO0OO1l100lllllO: lO0l0OOlll1OO01ll0O11(ord(l10l1OO0OO1l100lllllO),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 ^ 0 * 2 + 1,
-    O1l1110000000000llOl1(0 * 4 + 0, 2)), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, 3), 0))) != lllll100O110lOll1l010((0 * 2 + 0) *
-    (0 ^ 2 * 2 + 1), 0 * 2 + 0) * O1l1110000000000llOl1(4, 0 * 5 + 0) + 0,
-    '\x14,h\x04$:\x1eP0\x00@BF6\x10')).join(filter(lambda
-    lOOO10O1l10O1lll11OOO: lO0l0OOlll1OO01ll0O11(ord(lOOO10O1l10O1lll11OOO),
-    0 * ((0 ^ 2) * (l10lOO11O10ll00lO1l11(0 * 3 + 0, 1 * 5 + 1) + 2) +
-    lllll100O110lOll1l010((0 * 4 + 0) * (1 * 6 + 0), 1)) +
-    O1l1110000000000llOl1(0 * 4 + 3, 0 ^ 1)) != 0, 'x\x1cLL0x^8.xr\x1aF8d')
-    ).join(chr(O1l1110000000000llOl1(ll1OOO0OlllO010O0Ol1O,
-    Ol11l00l11O0l0l0Oll11)) for Ol11l00l11O0l0l0Oll11,
-    ll1OOO0OlllO010O0Ol1O in zip(
-    b'\x83\x94W*\x05h8|\xf4\x8a\xeb\xddpL\xcf:\xb1s',
-    b'\xd4\xfc6^%\x01K\\\x8d\xe5\x9e\xafP"\xaeW\xd4L')))
+OOOll11l111ll0000l1OO = lambda OOl00l001l10l0010lll0: ~OOl00l001l10l0010lll0
+llOl0OOl0O11l0OOlO10O = (lambda lO0lOl1l0OOO0ll111O01,
+    Ol0ll1O0l00O101lll1l0: lO0lOl1l0OOO0ll111O01 / Ol0ll1O0l00O101lll1l0)
+ll11O1ll01lO11Ol101OO = (lambda l1O01l1000O000OOOlOO1,
+    O0O0O01OO1lO0l11000l0: l1O01l1000O000OOOlOO1 * O0O0O01OO1lO0l11000l0)
+OO11lO0101l01O0OlO1O1 = (lambda O1O101lOOl0l0l1OlOlOl,
+    lO10OO00000l101O11Oll: O1O101lOOl0l0l1OlOlOl ^ lO10OO00000l101O11Oll)
+l1l1l011OO1l1l1O0l011 = (lambda lO11l1lOOOl10Olll1110,
+    ll0O100l0O1l0OO1OOlll: lO11l1lOOOl10Olll1110 // ll0O100l0O1l0OO1OOlll)
+ll0O1Ol0l1l01OlOlOl00 = (lambda Ol1l0OOlOl10Ol1000111,
+    l1OO1Oll10lO0110010Ol: Ol1l0OOlOl10Ol1000111 % l1OO1Oll10lO0110010Ol)
+O1OOl0l001l00l01llO00 = (lambda OllO0Ol0OO10l1O000lOO,
+    l1001l110O0O0lllOlOl0: OllO0Ol0OO10l1O000lOO + l1001l110O0O0lllOlOl0)
+Ol01l0Ol10l1O1lO110O0 = __import__(''.join(chr(ll1llO1O010Ol110lOll1 ^
+    Ol1lO10Ol10Ol1ll11O10) for Ol1lO10Ol10Ol1ll11O10, ll1llO1O010Ol110lOll1 in
+    zip(b'\xf8\x9c', b'\x97\xef')), globals(), locals(), [''.join(chr(
+    OO0O001100OOlO0O0lO00 ^ lOl11Ol10101110Oll0Ol) for 
+    lOl11Ol10101110Oll0Ol, OO0O001100OOlO0O0lO00 in zip(b'\xddv\x96\xb3Prf',
+    b'\xa8\x04\xf7\xdd4\x1d\x0b'))], 0)
+llO1OO0l1ll10l010O0ll = getattr(Ol01l0Ol10l1O1lO110O0, 'urandom')
+lO01l11l0OllO1l1Ol0O0 = __import__(''.join(chr(lOO11lO0O1O000O0ll001 ^
+    OO1O0O0O0OOll11l101l0) for OO1O0O0O0OOll11l101l0, lOO11lO0O1O000O0ll001 in
+    zip(b'}\xbd*\xac\x82\x1f\x95', b'\x1a\xd8^\xdc\xe3l\xe6')), globals(),
+    locals(), [], 0 * 4 + 0)
+l1O0l0OllO010ll0O10lO = getattr(lO01l11l0OllO1l1Ol0O0, ''.join(filter(lambda
+    ll11l0lOOll0Ol0OOl010: ord(ll11l0lOOll0Ol0OOl010) % 2 != 0,
+    '\x18pp,.Z\x0e\x004RLJ 2P')).join(filter(lambda l1ll110OO0OlO111l0Ol0: 
+    ll0O1Ol0l1l01OlOlOl00(ord(l1ll110OO0OlO111l0Ol0), 2 ^ 0) != 0,
+    'D<@x6|\n2TR\n\x0c4\\4')).join(filter(lambda OO0OO1O11O01l111010ll: 
+    ll0O1Ol0l1l01OlOlOl00(ord(OO0OO1O11O01l111010ll), O1OOl0l001l00l01llO00
+    (ll11O1ll01lO11Ol101OO(0 * (6 ^ 3) + 1, 3 ^ 6), 1)) != 0,
+    'Z`\x060l\x00`T\x06$6<*\x12T')).join(chr(OO11lO0101l01O0OlO1O1(
+    O1O0Ol1ll10O00lO10111, Oll11l00l1Ol1Ol10O0OO)) for 
+    Oll11l00l1Ol1Ol10O0OO, O1O0Ol1ll10O00lO10111 in zip(
+    b'fkBP!G^\xf1\xd3~-', b'\x11\x02,\x0fF"*\x81\xb2\r^')))(
+    O1OOl0l001l00l01llO00(''.join(filter(lambda O010O01OOO110O0l1000l: ord(
+    O010O01OOO110O0l1000l) % 6 != 0, '\x18*0$*`H\x00rr6\x06<NT')).join(
+    filter(lambda l0O00Ol1OllOl1l111ll0: ll0O1Ol0l1l01OlOlOl00(ord(
+    l0O00Ol1OllOl1l111ll0), 2 ^ 1 ^ 7) != 0 * 3 + 0,
+    'p4x\\8\x00h\x10|t\x04LLd(')).join(chr(OO11lO0101l01O0OlO1O1(
+    OO00l0O1l0010OllO0l01, lO10111O111OO001OOOll)) for 
+    lO10111O111OO001OOOll, OO00l0O1l0010OllO0l01 in zip(
+    b'\x12<\xe2$\x02\x9d\n \x81', b'ET\x83P"\xf4y\x00\xf8')),
+    O1OOl0l001l00l01llO00(''.join(chr(OO11lO0101l01O0OlO1O1(
+    l01l01O0OO0l00O1Oll1l, Ol00O000000O10OO011ll)) for 
+    Ol00O000000O10OO011ll, l01l01O0OO0l00O1Oll1l in zip(b'\xc0\xeb5\xee',
+    b'\xaf\x9eG\xce'))[::-2 ^ 1 ^ 0][::(-1 * 5 + 4) * (4 ^ 1) + ((0 * 6 + 0
+    ) * 5 + (5 ^ 1))], ''.join(filter(lambda OlO011O1ll1Ol1001l011: ord(
+    OlO011O1ll1Ol1001l011) % 5 != 0, '\x0f-}sU\x00(\n\x19K\x00(F}s')).join(
+    filter(lambda l0lO1O1l00l110l1lOl11: ll0O1Ol0l1l01OlOlOl00(ord(
+    l0lO1O1l00l110l1lOl11), 1 * 2 + 1) != 0, 'lc\x0cEE<\x0fZK\x0f`rl`\x18')
+    ).join(chr(OO11lO0101l01O0OlO1O1(ll0011l0000lll1lOllll,
+    OOO10lOO001O0011001O1)) for OOO10lOO001O0011001O1,
+    ll0011l0000lll1lOllll in zip(b'\x1e\xf1\x9d\xc3\x10', b'!\x94\xf0\xa2~'
+    ))[::-1 ^ 0 ^ 0 * 6 + 0])))
 
 
 def random_bytes(num_bytes):
- lO11O0lO1100010OlllOl = O0011lOlOllOlO1lOOOOl(num_bytes)
- return lO11O0lO1100010OlllOl
+ OlO00l11100l111llOl01 = llO1OO0l1ll10l010O0ll(num_bytes)
+ return OlO00l11100l111llOl01
 
 
-def OOO001ll1l101O0Ol101l(lO1O0001OO1O100OlllO1):
- return O0011lOlOllOlO1lOOOOl(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0,
-     O1l1110000000000llOl1(0 * 3 + 1, lllll100O110lOll1l010(
-     l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(0 * 4 + 0, 1),
-     O1l1110000000000llOl1(2 ^ 4, 2 ^ 0)), 0 * 5 + 3 ^ 0))),
-     O1l1110000000000llOl1(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-     lllll100O110lOll1l010(0 * (1 * 5 + 1 ^ 2), 0), lllll100O110lOll1l010(
-     l10lOO11O10ll00lO1l11((0 * 3 + 0) * (7 ^ 3) + 1, 0 ^ 0 * 4 + 2), 0 ^ 0 *
-     3 + 1)), O1l1110000000000llOl1(1 ^ 0, 0)), 0 * 5 + 0)))
+def O01OOlO00O01Ol0O001l1(O1O0Ol0OO1lll1OlOO0lO):
+ return llO1OO0l1ll10l010O0ll(O1OOl0l001l00l01llO00((ll11O1ll01lO11Ol101OO(
+     O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, 3 ^ 0), 0), 3) + 0) *
+     O1OOl0l001l00l01llO00((1 * 2 + 0) * (3 ^ 1), 0 * 6 + 0), 
+     ll11O1ll01lO11Ol101OO(0 * 3 + 0, OO11lO0101l01O0OlO1O1(2 ^ 1, 0 * 4 + 
+     1)) + 1))
 
 
-def OO0lO111l000OOO1l1l00(ll100ll0ll1lOl0lOOl11, O11Olll1l0l010ll00O0l):
+def lOOl001O0l1ll00ll0llO(OO0l000101O0111lO0Ol0, l11Ol101l1ll0001O0l0l):
 
- def lOOOl01O0Olll10ll00O0(l0llO0O0llO1l0l011Ol1):
-  return lllll100O110lOll1l010(l0llO0O0llO1l0l011Ol1, lllll100O110lOll1l010
-      (lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11((0 *
-      (3 ^ 0) + 0) * O1l1110000000000llOl1(2, 1) + (0 * (1 ^ 2) + 0),
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, lllll100O110lOll1l010(
-      (3 ^ 1) * (0 * 3 + 2), 0)), 0 * 6 + 3)) + lllll100O110lOll1l010(0 *
-      O1l1110000000000llOl1(2 ^ 1, 0), 0), O1l1110000000000llOl1(
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 3 + 0) * 4 + 0,
-      lllll100O110lOll1l010(0 * 5, 3)), lllll100O110lOll1l010((0 * 2 + 0) *
-      (0 * 6 + 3), 0)), O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0 * 6 +
-      0, 3 ^ 6) + (0 ^ 1), O1l1110000000000llOl1(3 ^ 0, 1)))),
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(0 *
-      3 + 0, 3 ^ 5) + 0, 5), 0)) * O1l1110000000000llOl1(
-      O1l1110000000000llOl1(O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0, 
-      0 ^ 2) + (0 * 6 + 0), 0 ^ 1), lllll100O110lOll1l010(1 * (0 * 4 + 3 ^ 
-      0 * 2 + 1), 0 * 4 + 0)), l10lOO11O10ll00lO1l11(0 * (3 ^ 6) + 0, 6) + 
-      0), 0 * O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0, 6) + 4,
-      O1l1110000000000llOl1(0 ^ 1 ^ 0 * 4 + 0 ^ 0, 0)) + (0 * (1 ^ 7) + 2)))
- return lOOOl01O0Olll10ll00O0(ll100ll0ll1lOl0lOOl11)
+ def ll11ll010ll0lO0OOll1O(Ol0O00lO01llll0OOO0l0):
+  return O1OOl0l001l00l01llO00(Ol0O00lO01llll0OOO0l0, OO11lO0101l01O0OlO1O1
+      (O1OOl0l001l00l01llO00(0 * (3 ^ 6), O1OOl0l001l00l01llO00(
+      ll11O1ll01lO11Ol101OO(0 * 4 + 1 ^ 0 * 4 + 0, 2 ^ (0 ^ 1)), 0)),
+      OO11lO0101l01O0OlO1O1(0 ^ (1 ^ 0), ll11O1ll01lO11Ol101OO(0, 3 ^ 0) + 0)))
+ return ll11ll010ll0lO0OOll1O(OO0l000101O0111lO0Ol0)
 
 
 class Data:
- internal = lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-     lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 *
-     O1l1110000000000llOl1(0 * 2 + 0, O1l1110000000000llOl1(0 * 4 + 1, 0 * 
-     4 + 0 ^ (1 ^ 6))), l10lOO11O10ll00lO1l11(0, l10lOO11O10ll00lO1l11(0 * 
-     5 + 1, 3) + 0) + (0 * 6 + 0)), lllll100O110lOll1l010(
-     l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(0 * 2 + 0, 1),
-     lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 4 + 0) * 4 + 0, 
-     l10lOO11O10ll00lO1l11(0 * (5 ^ 0) + (0 * 6 + 0), 0 * 6 + 4 ^ 0 * 3 + 2
-     ) + 4), 0 ^ 0 * 6 + 3)), O1l1110000000000llOl1(0 * (2 ^ 6) + 0, 1 ^ 0) ^
-     (1 ^ (2 ^ 0)))), (0 * 2 + 0) * (0 * 4 + (2 ^ 0)) + (0 * (0 ^ 3) + 0)),
-     lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-     l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-     lllll100O110lOll1l010(0 * (1 * 5 + 1), 0 * 5 + 0), 
-     l10lOO11O10ll00lO1l11(0, 0 * 6 + 5) + (2 ^ 4 ^ (3 ^ 1))), (0 * (0 * 6 +
-     3) + 0) * 5 + (l10lOO11O10ll00lO1l11(0 * 2 + 0, 2) + 0)),
-     O1l1110000000000llOl1(lllll100O110lOll1l010((l10lOO11O10ll00lO1l11(0 *
-     5 + 0, 6) + 0) * (1 * (1 ^ 4) + (0 * 6 + 0)), 0 * 4 + 1), 5)),
-     lllll100O110lOll1l010(0 * 3, lllll100O110lOll1l010((0 * 2 + 0) * (3 ^ 
-     0), 0 * 5 + 0))), O1l1110000000000llOl1(O1l1110000000000llOl1(
-     lllll100O110lOll1l010(0 * lllll100O110lOll1l010((0 * 3 + 1) * (0 * 4 +
-     3), 0 * 4 + 1), 0), 0 ^ 3), 0 * 6 + 1 ^ 5 ^ 0 * 3 + 1)),
-     lllll100O110lOll1l010((1 ^ 0) * 3, 1))), lllll100O110lOll1l010(0 *
-     lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * 
-     2, 0), O1l1110000000000llOl1(lllll100O110lOll1l010(
-     l10lOO11O10ll00lO1l11(0, 5), 0 * 4 + 3 ^ 0 * 6 + 1), 
-     l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(0 * 2 + 1, 0), 4) + (
-     l10lOO11O10ll00lO1l11(0 * 3 + 0, 1 ^ 5) + 0))), l10lOO11O10ll00lO1l11(
-     l10lOO11O10ll00lO1l11(0, 1 * 5 + 0) + 0, 2 * 3 + 0 ^ 1 * 3 + 0) +
-     O1l1110000000000llOl1(1 * 4 + 1 ^ 3, 0 ^ 3 ^ 1)),
-     lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 2 + 1 ^ 0 ^ 0, 
-     l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * 4, 0), 2 ^
-     lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 7 ^ 2), 1 ^ 0)) + (0 ^ 
-     2)), l10lOO11O10ll00lO1l11(0, (0 * 5 + 1) * 3 + (0 * 4 + 0)) + (0 * (1 ^
-     3) + 0))))
+ internal = O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(
+     O1OOl0l001l00l01llO00((0 * 3 + 0) * 3, 0 * 6 + 0), 
+     ll11O1ll01lO11Ol101OO(0 * 5 + 1, (2 ^ 1) * (0 * 3 + 2) + 0) + 0), 0) ^ (
+     0 * 2 + 0) * (4 ^ 2) + (3 ^ 1)
 
  def add_2_instance(self, a):
-  return lllll100O110lOll1l010(a, getattr(self, ''.join(filter(lambda
-      OOOlOlO1lO1OO1llO0OO1: ord(OOOlOlO1lO1OO1llO0OO1) % 2 != 0,
-      '\x16F.("4D^Rp:f\x1c\x18P')).join(filter(lambda Oll0lO11l1OO10l11lO11:
-      lO0l0OOlll1OO01ll0O11(ord(Oll0lO11l1OO10l11lO11), 0 * 3 + 0 ^ (3 ^ 0)
-      ) != 0 * (0 ^ 2) + (0 * 5 + 0), '\tKT*r\x1b9$N9]B\x1bo\x18')).join(
-      chr(O1OOl0O00lll1l1110l10 ^ l1OO001l1ll0lO1O1OO00) for 
-      l1OO001l1ll0lO1O1OO00, O1OOl0O00lll1l1110l10 in zip(
-      b'\xe0\xca\x95\xdfC"n\xe5', b'\x8c\xab\xfb\xad&V\x00\x8c'))[::
-      l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(-2 ^ 1, 0 * (3 ^ 1) + 0),
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 5 + 0, 3), 0 * 6 + 0) ^
-      (3 ^ (1 ^ 0) ^ 2 * 3 + 0)) + (0 ^ 0 * 5 + (1 * 3 + 0))]))
+  return O1OOl0l001l00l01llO00(a, getattr(self, ''.join(chr(
+      OO11lO0101l01O0OlO1O1(lll10100l1llO1O100lll, lO010l00010OOl11l0OlO)) for
+      lO010l00010OOl11l0OlO, lll10100l1llO1O100lll in zip(
+      b'c\xe0f/t\x88\xc58', b'\n\x8e\x12J\x06\xe6\xa4T'))))
 
  @classmethod
- def add_2_class(l10Ol1l1l000lOl01lO0O, llOO01Ol1l011ll0O001O):
-  return lllll100O110lOll1l010(llOO01Ol1l011ll0O001O, getattr(
-      l10Ol1l1l000lOl01lO0O, ''.join(filter(lambda O10OOO00ll1lOlOl11lO1: 
-      ord(O10OOO00ll1lOlOl11lO1) % O1l1110000000000llOl1(0 * 2 + 1, 3 ^ 6) !=
-      l10lOO11O10ll00lO1l11(0, 6 ^ 2) + 0, '\x08 H0x Dd0T,\x0cP$(')).join(
-      filter(lambda O0O0l001O11l1l11OO01O: lO0l0OOlll1OO01ll0O11(ord(
-      O0O0l001O11l1l11OO01O), O1l1110000000000llOl1(0 * 5 + 0, 2)) != 0 *
-      O1l1110000000000llOl1(6, 2) + 0, 'v\x04j\nnNd@\x10Bl.`Z&')).join(chr(
-      O1l1110000000000llOl1(OO00OOOO1001lO11OO00O, l000O00Ol0OO00OO01l10)) for
-      l000O00Ol0OO00OO01l10, OO00OOOO1001lO11OO00O in zip(
-      b'K\xe4\x17#\xed)\x14\x04', b'"\x8acF\x9fGuh'))))
+ def add_2_class(O0OlOl0111110OO010OOl, Oll0O01O10O11O0OO0O0O):
+  return O1OOl0l001l00l01llO00(Oll0O01O10O11O0OO0O0O, getattr(
+      O0OlOl0111110OO010OOl, ''.join(filter(lambda O001011OlO1ll1lOO01O0: 
+      ord(O001011OlO1ll1lOO01O0) % (1 ^ 2) != 0 * 5 + 0,
+      "?Ec!'\x15T$Q`3N'\x18{")).join(filter(lambda l0lll1l01110O1O10Ol1O: 
+      ord(l0lll1l01110O1O10Ol1O) % (7 ^ 3) != 0 * OO11lO0101l01O0OlO1O1(0 *
+      5 + 1, 2) + (ll11O1ll01lO11Ol101OO(0, 6) + (0 * 3 + 0)),
+      '\x0c(x(ltlX08<p0\x0c\x04')).join(chr(OO11lO0101l01O0OlO1O1(
+      OlOl01l10llllO00O0llO, ll00l110lO010010O1110)) for 
+      ll00l110lO010010O1110, OlOl01l10llllO00O0llO in zip(
+      b"K\xf3R\xe3gP'\x14", b'"\x9d&\x86\x15>Fx'))))
 
  @staticmethod
- def add_2_static(lOll11lOl001l1OlO11O0):
-  return lllll100O110lOll1l010(lOll11lOl001l1OlO11O0, lllll100O110lOll1l010
-      (l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (1 ^ 2), 0 * 2 + 0) *
-      (l10lOO11O10ll00lO1l11(0, l10lOO11O10ll00lO1l11(1 ^ 0, 0 ^ 3) + (0 * 
-      3 + 2) ^ 0) + (1 ^ 0 ^ (1 ^ 2 ^ 0))) + (0 * ((0 * 5 + 0) * 5 + (1 ^ 2
-      )) + (0 * 5 + 0)), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 4), (0 * 2 + 0) * (0 *
-      5 + 3) + (0 * 3 + 1)), O1l1110000000000llOl1(0, 1 ^ 7)),
-      O1l1110000000000llOl1(0, 0 * 2 + 1)) ^ O1l1110000000000llOl1((0 * 6 +
-      0) * (1 * 4 + 2) + (1 * 3 + 0), lllll100O110lOll1l010(
-      l10lOO11O10ll00lO1l11(0, 0 * 3 + 2 ^ (0 ^ 1)), 0 * 2 + 0))),
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 5 + 0,
-      O1l1110000000000llOl1(((0 * (2 * 2 + 1) + 0) * (1 ^ 0 ^ 2) + (
-      l10lOO11O10ll00lO1l11(0 * 6 + 0, 3) + (0 * 5 + 1))) * (
-      lllll100O110lOll1l010((0 * 5 + 0) * (2 ^ 4), 2) ^ 0) +
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 1 * 5 + 1), 0), 
-      lllll100O110lOll1l010(0 * (0 * 4 + 3), 1) ^ 0)),
-      lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, lllll100O110lOll1l010(
-      l10lOO11O10ll00lO1l11(0, 0 * 6 + 3), 0) ^ 0 * 5 + 3), 0 * 5 + 3 ^ (0 ^
-      1)))))
+ def add_2_static(lOO1lO1l0O0lOO00llO1O):
+  return O1OOl0l001l00l01llO00(lOO1lO1l0O0lOO00llO1O, O1OOl0l001l00l01llO00
+      (OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00(O1OOl0l001l00l01llO00(0 *
+      (3 * 2 + 0), 0 * 3 + 0) * O1OOl0l001l00l01llO00((0 * 2 + 0) * (0 ^ 6),
+      2), 0), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0 * 2 + 0, 5 ^ 0 *
+      2 + 0), 1 ^ 0)) * OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00(0 * 4, 
+      0) ^ (0 ^ 1 ^ 0 * 2 + 0), OO11lO0101l01O0OlO1O1(0 * 4 + 2, 1 ^ 0)), 0))
 
 
-if ll1OOllOlOll00O0Ollll:
- print(lO0l0OOlll1OO01ll0O11(''.join(filter(lambda Ol1lO0O1O010l1lOO1ll0: 
-     ord(Ol1lO0O1O010l1lOO1ll0) % 2 != 0 * 5 + 0,
-     'r\x10*\x14\x06jdP<\x064L.,D')).join(filter(lambda
-     O11ll11l1O0O00O0l01Ol: ord(O11ll11l1O0O00O0l01Ol) % (1 ^ 3) != 0 * 6 +
-     0, '\x08\x1e\x00<\x1c2bh\x1c^z&^j ')).join(filter(lambda
-     lllO1O00O0ll0OO110OO0: lO0l0OOlll1OO01ll0O11(ord(lllO1O00O0ll0OO110OO0
-     ), O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-     l10lOO11O10ll00lO1l11(0 * (1 * 4 + 1) + (0 * 3 + 0), 
-     l10lOO11O10ll00lO1l11(0, 1 * 4 + 1) + 3), 0 * 6 + 0), 3 ^ (1 ^ 0 * 5 +
-     0)) + ((0 * 2 + 0) * (0 ^ 6) + 0), l10lOO11O10ll00lO1l11(0 ^ 3, 1 * 2 +
-     0) + 0)) != lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-     lllll100O110lOll1l010(0 * ((0 * (2 * 2 + 0) + (0 * 6 + 1)) * (0 * 5 +
-     (5 ^ 1)) + (1 ^ 3)), 0 * 2 + 0), 0 ^ 1 ^ (2 ^ 0)), 0 * (
-     lllll100O110lOll1l010((0 * 6 + 0) * (1 ^ 4), 0 * 5 + 0) ^ 0 * 6 + 2) +
-     (l10lOO11O10ll00lO1l11(0, 2 ^ 1) + (0 * 4 + 0))),
-     '\x0c`TZ\x00\x1eHTHNB*\x0c*6')).join(chr(O1l1110000000000llOl1(
-     lO0l0l1O01ll1O1ll010O, l10l100lOO1l111l1OOOO)) for 
-     l10l100lOO1l111l1OOOO, lO0l0l1O01ll1O1ll010O in zip(
-     b'\x86\x13E_\x9e\x90[C\xfa\xe9', b'\xcev)3\xf1\xbc{f\x89\xc8')),
-     ll1OOllOlOll00O0Ollll))
+if l1O0l0OllO010ll0O10lO:
+ print(ll0O1Ol0l1l01OlOlOl00(''.join(filter(lambda OlO1O100l101l0l100OO1: 
+     ord(OlO1O100l101l0l100OO1) % (6 ^ 0) != 0,
+     '\x12\x0cT$0*N\x00x\x1eZrN\x18\x12')).join(filter(lambda
+     Ol0l01OllOO0O1l1O1Oll: ll0O1Ol0l1l01OlOlOl00(ord(Ol0l01OllOO0O1l1O1Oll
+     ), O1OOl0l001l00l01llO00((2 ^ 0) * (0 ^ 2), 0 * 5 + 0)) != 0,
+     'Dp`( d$,l< H\\ p')).join(chr(OO11lO0101l01O0OlO1O1(
+     l10lO0O1O0Ol1l1O010Ol, O0OO110100l1ll0l01O00)) for 
+     O0OO110100l1ll0l01O00, l10lO0O1O0Ol1l1O010Ol in zip(
+     b'\xac\xfe\xec\xdb\xf8]\xcc`\xe5\x0c',
+     b'\xe4\x9b\x80\xb7\x97q\xecE\x96-')), l1O0l0OllO010ll0O10lO))
 else:
- print(''.join(filter(lambda lOlll0000l1Ol1l1Oll01: ord(
-     lOlll0000l1Ol1l1Oll01) % 5 != 0, 'n\x0fs\x05xAA\x0fZZ_U(si')).join(
-     filter(lambda l111lOllO111O11O01O01: ord(l111lOllO111O11O01O01) % (3 ^
-     1) != 0, 'p\x14^t\x0eJzXbZ\x04R>R\x06')).join(filter(lambda
-     Ol0Ol00O101lO0lO1010l: lO0l0OOlll1OO01ll0O11(ord(Ol0Ol00O101lO0lO1010l
-     ), 6 ^ (3 ^ 0)) != 0 * 3 + 0, '\x197(\x05\nF\x0f\x19(_<#_A(')).join(
-     chr(O1l1110000000000llOl1(lO001O000lllO0OOO0l0l, lO1ll1100Ol0lOlOO11ll
-     )) for lO1ll1100Ol0lOlOO11ll, lO001O000lllO0OOO0l0l in zip(
-     b'\x92\xce\xef\x85\x81H\xa7\x99\x9c\xa2^p\x15]\xae\xc4',
-     b'\xdb\xee\x9c\xe0\xe4h\xcf\xf6\xeb\x827\x0454\xdd\xe5')))
-lOOOl01O0Olll10ll00O0 = O1l1110000000000llOl1(O1l1110000000000llOl1((0 ^ 1) *
-    (0 * 5 + 2) + 0 ^ (5 ^ 8), 0 ^ 1), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(3 ^ 0 ^ (1 ^ 3) * (1 * 4 + 0) + (0 * 4 + 2),
-    O1l1110000000000llOl1(0 * 6 + 1 ^ (3 ^ 0), 0 * (1 * 6 + 0) + 4)),
-    O1l1110000000000llOl1((l10lOO11O10ll00lO1l11(0, 1 ^ 3) + 0) * (3 ^ 5) +
-    (1 ^ 0 * 2 + 0), 0 * (7 ^ 2) + (0 * 6 + 0))))
-print(lOOOl01O0Olll10ll00O0, getattr(Data, ''.join(filter(lambda
-    O1OO00l1O1lllO0OO0OlO: ord(O1OO00l1O1lllO0OO0OlO) % (4 ^ 2) != 0,
-    'r*f*B\x18B`Nl0`\x12*6')).join(filter(lambda l1O1l00O0ll01l0l01001: 
-    lO0l0OOlll1OO01ll0O11(ord(l1O1l00O0ll01l0l01001), 6) != 0,
-    '\x0crHl\x0c6f6B*\x0c0NZN')).join(filter(lambda l01ll1l0OOl101O00O1O0: 
-    lO0l0OOlll1OO01ll0O11(ord(l01ll1l0OOl101O00O1O0), 5) != 0,
-    '\x0fsi\x00_}\nAd__ZA<#')).join(filter(lambda l01lOOl0Ol1010OlOO01l: 
-    ord(l01lOOl0Ol1010OlOO01l) % ((0 * 2 + 1) * (l10lOO11O10ll00lO1l11(0, 2 *
-    3 + 0) + (1 * 4 + 1)) + (0 ^ 1)) != (0 * 6 + 0) * (1 * 4 + 1) + 0,
-    '\x1e0N\x1eH<rrZT<$H\x0c\x1e')).join(chr(O1l1110000000000llOl1(
-    llll1O0O01011Ol111111, O11Ol10011O0OO0l001Ol)) for 
-    O11Ol10011O0OO0l001Ol, llll1O0O01011Ol111111 in zip(
-    b'\x8b\xf7\xef\x00H\xb9\xce\x0f\x9d~\xa4',
-    b'\xea\x93\x8b_z\xe6\xadc\xfc\r\xd7')))(lOOOl01O0Olll10ll00O0), Data().
-    add_2_instance(lOOOl01O0Olll10ll00O0), Data().add_2_static(
-    lOOOl01O0Olll10ll00O0), OO0lO111l000OOO1l1l00(lOOOl01O0Olll10ll00O0,
-    None), O1lOlO0l0O1llOlOOO1l1(lOOOl01O0Olll10ll00O0,
-    O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0 * 4 + 0, 
-    lllll100O110lOll1l010((0 * 5 + 1) * 5, 0) ^ (1 ^ 0 * 2 + 0)) + (0 * (3 ^
-    1 * 3 + 2) + 3), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    l10lOO11O10ll00lO1l11(0 * 4 + 0, 4) + 0, 5 ^ 2 ^ 3),
-    O1l1110000000000llOl1(1, (0 * 6 + 0) * (1 ^ 4) + 0)))),
-    lllll100O110lOll1l010((O1l1110000000000llOl1(O1l1110000000000llOl1(
-    1106825146706843 ^ 2110014846536446, 3257438469038705), (69238954936221 *
-    2 + 1) * 5 + 1) ^ lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((
-    9725256151224 * 2 + 0) * (5 ^ 0) + 0, 7 ^ (1 ^ 3)), 0 * 2 + 1)) / (
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    O1l1110000000000llOl1((118579708503511 * 5 + 1) * 5 + 2, 
-    270492928413742 * 6 + 3) ^ 1660848095459771, lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 6 ^
-    2), 0 * 5 + 1), 3 ^ 6 ^ (0 * 6 + 0) * 5 + (0 * 5 + 0)), 0 * 6 + 0 ^ (1 ^
-    0))), O1l1110000000000llOl1(2 ^ 0, l10lOO11O10ll00lO1l11(0 * 2 + 0 ^ 1,
-    0 * 6 + 0 ^ (0 ^ 4)) + (1 ^ (2 ^ 1)))), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11((0 * 4 + 0) * (0 * 5 + 3) + 0, 3), 
-    l10lOO11O10ll00lO1l11(0 * 3 + 0, 5 ^ 3) + ((0 ^ 1) * 2 + 0))) + 0),
-    O10l0l1l0O01l1lOO0l1l(lllll100O110lOll1l010(O1l1110000000000llOl1(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((11691228405145 * 4 + 2) * 
-    3 + (0 ^ 2), O1l1110000000000llOl1(0 * 4 + 0, 4)), (0 * 3 + 0) * (0 * 6 +
-    5) + (0 * 4 + 0)), 199399473196045 ^ 134989959454351 ^ 167428221182855 *
-    6 + 0 ^ O1l1110000000000llOl1(12879595638456 * 3 + 2, 44354959706460 * 
-    4 + 0)) * (0 ^ 1 * 2 + 1 ^ O1l1110000000000llOl1(1 ^ 3, 1 * 4 + 3)), (0 *
-    (3 ^ 7) + 0) * 5 + (0 * 3 + 0 ^ (1 ^ 0))), l10lOO11O10ll00lO1l11(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(
-    36800306572573 * 3 + 0 ^ (106212191454205 ^ 262882347420182), (
-    239107502681495 * 2 + 1) * (0 * 6 + 2) + 1), 1 ^ 0 ^ 1 * 6 + 1), (0 * 2 +
-    0) * (7 ^ 1) + 3), (0 * 3 + 1) * (0 ^ 3) + 0 ^ 0 * (0 ^ 4) + 0) +
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 0 * 6 + 0 ^ 1 * 3 + 1),
-    lllll100O110lOll1l010(lllll100O110lOll1l010(0 * 3, 0 * 4 + 0) *
-    O1l1110000000000llOl1(2 ^ 1, 6 ^ 3), 0 * (2 * 3 + 0) + (1 ^ 0))))),
-    lOO1Oll010l11l000O00l(lllll100O110lOll1l010(O1l1110000000000llOl1(
-    lllll100O110lOll1l010(0 * (0 * 6 + 2), 0), 0 * 3 + 0 ^ 0 * 4 + 1) *
-    O1l1110000000000llOl1(0 * 2 + 0 ^ 2, 0 * 5 + 0), lllll100O110lOll1l010(
-    (0 * (1 * 6 + 0) + 0) * (l10lOO11O10ll00lO1l11(0 * 2 + 1, 0 * 4 + 3) + 
-    2), 0))))
-print(lllll100O110lOll1l010(lllll100O110lOll1l010(''.join(chr(
-    l11O111lOl10l1O01l110 ^ lO1ll0OO1l01110O0O101) for 
-    lO1ll0OO1l01110O0O101, l11O111lOl10l1O01l110 in zip(
-    b'\xba\xad\x0b\xe5\xcf\x19\x9fG\xd0\x04',
-    b'\x8a\x9d%\xcb\xe1-\xbfj\xe3\x0e'))[::l10lOO11O10ll00lO1l11(-1, 6) + 4 ^
-    1], ''.join(filter(lambda OOOlO000l0ll11011101O: ord(
-    OOOlO000l0ll11011101O) % 5 != 0 * 5 + 0,
-    '\x14s\x05Zn\x19ix\x1e\x14\x1e-UF-')).join(chr(Olll1O0OOl1101OOO0l01 ^
-    Ol1O0111Oll11O0O01lOl) for Ol1O0111Oll11O0O01lOl, Olll1O0OOl1101OOO0l01 in
-    zip(b'\xb5\x04\x8e\xa5\xb7n\x87\xbd\x07\xbe\x80',
-    b"\x854\xbd\x8b\x87N\xbf\x8f'\x87\xb5"))), ''.join(filter(lambda
-    l0110lO0llOlOO001Ol0l: ord(l0110lO0llOlOO001Ol0l) % 5 != 0,
-    'Kxn\x1e--\x05KA-Z\nin\x14')).join(filter(lambda lOl1lOO0O1lOO1lO001lO:
-    ord(lOl1lOO0O1lOO1lO001lO) % (0 * 4 + 2) != 0, 'fn@Xv^"\x0c2dD\x10lf`')
-    ).join(filter(lambda OOO1lO11Ol10OOl0O0lll: lO0l0OOlll1OO01ll0O11(ord(
-    OOO1lO11Ol10OOl0O0lll), O1l1110000000000llOl1(0 ^ 0 * 3 + 2, 0 * 2 + (0 *
-    3 + 0))) != lllll100O110lOll1l010(0 * 4, 0 * 6 + 0) *
-    O1l1110000000000llOl1(2 ^ 0, 0 * 4 + 1) + 0,
-    '\x00\x1eV0d>\x10`\n.\x02\x04Bp*')).join(chr(O1l1110000000000llOl1(
-    lOOO110lO000O0Ol110OO, l10O1l10l1O111Ol00OO1)) for 
-    l10O1l10l1O111Ol00OO1, lOOO110lO000O0Ol110OO in zip(
-    b'\xd5\xe7\x05\xc9\xd9\xb3Fp\x9f\x9a/\xea\x1fP\x13\xa6I*ytu\n',
-    b'\xf5\xde0\xe9\xe0\x86fI\xaa\xba\x18\xdf?jw\xc3=I\x1c\x04\rO')))[::
-    O1l1110000000000llOl1(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(-1 * 
-    5 + 2 ^ (2 ^ 1) ^ (0 ^ (0 ^ 1)), lllll100O110lOll1l010(
-    O1l1110000000000llOl1(0 * 6 + 1, 0) * lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, (0 * 4 + 2) * (2 ^ 0) + (0 * 3 + 0)), 0 * 6 + 
-    0 ^ 0 * 4 + 2), l10lOO11O10ll00lO1l11(0, 2 * 3 + 0) + (0 ^ 1))),
-    O1l1110000000000llOl1(1 ^ 0 * 3 + 2, O1l1110000000000llOl1(0, 1) ^ (0 *
-    3 + 0) * (0 ^ 4) + 0)), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 *
-    6 + (0 * 6 + 0), l10lOO11O10ll00lO1l11(lllll100O110lOll1l010((0 * 5 + 0
-    ) * (1 ^ 0 ^ 7), 0), 0 ^ 1 ^ 0 * 6 + 4 ^ (0 ^ (0 ^ 3))) + ((0 * 5 + 0) *
-    O1l1110000000000llOl1(1 * 2 + 1, 5) + 2)), lllll100O110lOll1l010(0 * (1 *
-    (0 * 5 + 4) + (1 ^ 0)), 0)))])
-lOOOl01O0Olll10ll00O0 = lllll100O110lOll1l010(lOOOl01O0Olll10ll00O0,
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(
-    lllll100O110lOll1l010(((0 * 6 + 0) * (0 * 5 + (1 * 4 + 0)) + (0 * (1 * 
-    6 + 0) + 0)) * lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 2 + 0) *
-    6 + 0, lllll100O110lOll1l010(1 * (2 ^ 7), 0)), 0 ^ 2 ^ 6),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(0, 0 ^
-    5) + (0 * 3 + 0), l10lOO11O10ll00lO1l11(0 * 3 + 1 ^ 0,
-    O1l1110000000000llOl1(0 ^ 1, 1 * 2 + 0)) + lllll100O110lOll1l010((0 * 3 +
-    0) * (0 * 6 + 3), 1)), 0)), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11
-    ((l10lOO11O10ll00lO1l11(0 * 3 + 0, l10lOO11O10ll00lO1l11(1, 0 * 6 + 3) +
-    0) + ((0 * 2 + 0) * (1 ^ 3) + (0 * 5 + 0))) * lllll100O110lOll1l010((0 *
-    5 + 1) * (0 * 2 + 1 ^ (2 ^ 0)), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0 * 5 + 0, 1 ^ 5), 0)) + ((0 * 6 + 0) * (0 ^ 6) +
-    0), l10lOO11O10ll00lO1l11(0, lllll100O110lOll1l010(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 5), 0 * 5 + 1) *
-    lllll100O110lOll1l010((0 * 6 + 2) * (2 ^ 0), 0), 0 * (7 ^ 1) + (1 ^ 3))
-    ) + ((0 * 4 + 1) * (1 * 2 + 1) + (0 ^ 0 * 5 + 1))), 0 *
-    lllll100O110lOll1l010(0 * 3, 0 * 5 + 2) + 0 ^ lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, (0 * 3 + 0) * (1 * 6 + 0) + 3), 0 ^ 1 ^ 3))),
-    O1l1110000000000llOl1(lllll100O110lOll1l010(0 * (O1l1110000000000llOl1(
-    0 * 4 + 2, 0 * 2 + 0) ^ 4), lllll100O110lOll1l010((0 * 3 + 0) * (1 * 3 +
-    1), 0)), O1l1110000000000llOl1(lllll100O110lOll1l010(((0 * 2 + 0) * (2 *
-    3 + 0) + (0 ^ 1)) * lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 0 ^ 
-    3), 1 ^ 3), 0), (0 * 4 + 0) * 2 + 1) * O1l1110000000000llOl1(
-    lllll100O110lOll1l010(0 * (1 * 3 + 0 ^ (2 ^ 4)), 0 ^ (1 ^ 0)), (0 ^ 1) *
-    ((0 * 3 + 0) * (0 * 6 + 4) + (3 ^ 0)) + 0) + (0 * (1 ^ 2) + 0))),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * (6 ^ 3) + (0 * 5 + 0),
-    O1l1110000000000llOl1(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    O1l1110000000000llOl1((0 * 6 + 0) * (4 ^ 2) + (0 * 6 + 2), 0 * 6 + 1),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, (1 ^ 3) * 2 + (1 ^ 0)), 
-    (0 * 6 + 0) * (2 * 2 + 0) + (0 * 3 + 2))), (0 * (0 * 5 + 3) + (0 * 5 + 
-    0)) * (2 ^ 7 ^ 0) + (0 * 5 + 1)), l10lOO11O10ll00lO1l11(0 * 3 + 0,
-    lllll100O110lOll1l010(1 * (1 * 5 + 0), 0 ^ 1)) + O1l1110000000000llOl1(
-    0 * 4 + 0, 1))), 0 * 5 + 3)))
-print(lOOOl01O0Olll10ll00O0)
-print(''.join(filter(lambda l11O0010O1lll1lOlO0l0: lO0l0OOlll1OO01ll0O11(
-    ord(l11O0010O1lll1lOlO0l0), (1 ^ 0) * (0 ^ 5) + 0) != 
-    l10lOO11O10ll00lO1l11(0 * 5 + 0, 4) + 0, '<\x19PUZ\x19Pd77i\x00#n\x00')
-    ).join(filter(lambda l0O0O1OO10100l010l0Ol: lO0l0OOlll1OO01ll0O11(ord(
-    l0O0O1OO10100l010l0Ol), l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11((0 * 4 + 0) * (3 * 2 + 0) + 0, 2 ^ 1 ^ 0 * 5 + 0),
-    0 * 2 + 1), 0 ^ 2) + lllll100O110lOll1l010((l10lOO11O10ll00lO1l11(0 * (
-    0 * 6 + 3) + (0 * 5 + 0), 4) + lllll100O110lOll1l010(0 * (1 ^ 3), 0 * 4 +
-    0)) * (O1l1110000000000llOl1(1 ^ 0, 0 * 3 + 0) * (6 ^ 2) + (
-    l10lOO11O10ll00lO1l11(0, 2) + 1)), 1)) != l10lOO11O10ll00lO1l11(
-    lllll100O110lOll1l010(lllll100O110lOll1l010(0 * (0 * (0 * 6 + 5) + (1 ^
-    2)), 0) * O1l1110000000000llOl1(0 ^ 2, 3 ^ 6 ^ 3), 0 * 4 + 0), 
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 2 + 0, 4), 1) ^ 
-    l10lOO11O10ll00lO1l11(0 * 3 + 1 ^ 0 * 5 + 3, 3) + (0 * 5 + 1)) + (
-    l10lOO11O10ll00lO1l11(0 * 6 + 0, 7 ^ 0 * 5 + 2) + ((0 * 5 + 0) * (1 * 5 +
-    1) + 0)), 'c?Z-\x15!$f6uoZWxl')).join(chr(O1l1110000000000llOl1(
-    lll1l1l00l11010O00OlO, Olll0l11l01lO10001110)) for 
-    Olll0l11l01lO10001110, lll1l1l00l11010O00OlO in zip(
-    b'\x8a\xe4\xa6wG%\xb2\x8c\xeb\xfd\x9e\xf5\x9f',
-    b'\xcf\x9c\xd6\x12$Q\xd7\xe8\xd1\xdd\xa9\xc7\x95')))
-Data.internal = lllll100O110lOll1l010(getattr(Data, ''.join(filter(lambda
-    lO01O0l1O010l1OlO0100: ord(lO01O0l1O010l1OlO0100) % 6 != 0,
-    '$*\x00\x18f\x1e`Tl\x0c*rfN$')).join(filter(lambda
-    O1Ol01lOOO1lO0l1000l0: ord(O1Ol01lOOO1lO0l1000l0) % ((0 * 6 + 0) * (3 *
-    2 + 0) + (1 * 3 + 0)) != 0, "x\x1e\x03'<B-6*T\x15ZH\x1ei")).join(filter
-    (lambda Ol01l111l1l010000l0O0: ord(Ol01l111l1l010000l0O0) %
-    O1l1110000000000llOl1(1 * 2 + 1, 0) != lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0 * 2 + 0, 5), 0), '\x06\x0c93i]T?Q-o<H*B')).join
-    (chr(OOlOl1ll1lOO0ll000l1l ^ O00llOl00lO0llO010O01) for 
-    O00llOl00lO0llO010O01, OOlOl1ll1lOO0ll000l1l in zip(
-    b'V\xa1\x1d\rn0\xa3o', b':\xc0s\x7f\x0bD\xcd\x06'))[::-1 ^ 0]),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, 1 * 2 + 0 ^ O1l1110000000000llOl1(0, 1)), (0 *
-    3 + 0) * (1 * 6 + 0 ^ 0 * 4 + 0) + 0), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, lllll100O110lOll1l010(lllll100O110lOll1l010(0 *
-    (0 * (4 ^ 1) + 4), 0 * 2 + 1 ^ 0 * 6 + 0) * (1 * 2 + 1),
-    O1l1110000000000llOl1(lllll100O110lOll1l010(0 * 5, 0), 0 * (1 * 3 + 1) +
-    2))), 1 ^ 3) ^ lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 ^ 0 * 5 + 
-    2, O1l1110000000000llOl1(0, 1 ^ 0 * 3 + 2)), 0 * 4 + 0)), 
-    lllll100O110lOll1l010(0 * (2 ^ 4), 1 ^ 0) ^ 0 * 4 + 0))
-print(lOOOl01O0Olll10ll00O0, getattr(Data, ''.join(chr(
-    OO10llO01Ol11O1OOOlO1 ^ lO1OOllOOOOlll1OllOll) for 
-    lO1OOllOOOOlll1OllOll, OO10llO01Ol11O1OOOlO1 in zip(
-    b')/\t*\xc5?\xd2\xe6\x10S\xe6', b'HKmu\xf7`\xb1\x8aq \x95')))(
-    lOOOl01O0Olll10ll00O0), Data().add_2_instance(lOOOl01O0Olll10ll00O0),
-    Data().add_2_static(lOOOl01O0Olll10ll00O0), OO0lO111l000OOO1l1l00(
-    lOOOl01O0Olll10ll00O0, None))
-print(lllll100O110lOll1l010(''.join(filter(lambda OlO0101llO01OOlOO000l: 
-    ord(OlO0101llO01OOlOO000l) % (5 ^ 0) != 0,
-    's-\x0f\x0fdx\x14\x19\x19Z-dZ\x00n')).join(filter(lambda
-    O1l1l01l1l10O111O01ll: lO0l0OOlll1OO01ll0O11(ord(O1l1l01l1l10O111O01ll),
-    1 ^ (5 ^ 1)) != l10lOO11O10ll00lO1l11(0 * 6 + 0, 2 * 2 + 1) + 0,
-    'd2ZZ\x19Z-}<2U\x1ePn_')).join(filter(lambda O010lO11O0O101lO101ll: 
-    lO0l0OOlll1OO01ll0O11(ord(O010lO11O0O101lO101ll), 0 * 4 + (0 * 5 + 3)) !=
-    0 * 6 + 0, 'QZQrH?0i0\x03N\x1b\x18$\x0c')).join(filter(lambda
-    lO110l1Ol11001O1lOOO1: lO0l0OOlll1OO01ll0O11(ord(lO110l1Ol11001O1lOOO1),
-    O1l1110000000000llOl1(O1l1110000000000llOl1(0 * 2 + 1, 3 ^ 0) ^ (0 * 6 +
-    1 ^ 0), l10lOO11O10ll00lO1l11(0 * 4 + 0, lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, 2 ^ 4), 2 ^ 6)) + 0)) != l10lOO11O10ll00lO1l11
-    (0, 1 * 4 + 1) + (0 * 3 + 0), '6\tx<i?3$o6$cE\t$')).join(chr(
-    O1l1110000000000llOl1(OOl0O0l01000001ll001l, OO1l01O111ll11111l1ll)) for
-    OO1l01O111ll11111l1ll, OOl0O0l01000001ll001l in zip(
-    b'\x9c[\x12\xc6\x92\x9eA\xa3\x13T\x9d\xe2',
-    b'\xd9#b\xa3\xf1\xea$\xc7)t\xaa\xd0')), ''.join(filter(lambda
-    lll1ll0O1l0Ol0010lO10: ord(lll1ll0O1l0Ol0010lO10) % 6 != 0,
-    '`T$xZ\x06\x1e6`\x18\x18\x1eZTf')).join(filter(lambda
-    OOOl0O11O10l0lO1OO00l: ord(OOOl0O11O10l0lO1OO00l) % (1 ^ 3 ^ (3 ^ 7)) !=
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * (0 ^ 3) + (0 * 2 + 0), 
-    (0 ^ 1) * (1 * 5 + 0) + (0 * 4 + 1)), 0),
-    '$\x0cH`\x120x\x0c6<Z\x06B\x1e\x1e')).join(chr(O1l1110000000000llOl1(
-    l0O00110O10llO0ll01OO, l0O0O10lO110l0001OO0O)) for 
-    l0O0O10lO110l0001OO0O, l0O00110O10llO0ll01OO in zip(
-    b"}zw\x8c{\xd0,\x98'\x0e\xd7^h", b'wN@\xacO\xe7\x0c\xad\x10.\xe2iH'))[:
-    :lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(
-    lllll100O110lOll1l010((-1 ^ 0) * (6 ^ 0), 4), 0 ^ 1),
-    lllll100O110lOll1l010(1 * 4, 2)), O1l1110000000000llOl1((0 * 3 + 0) * (
-    1 ^ 2) + (1 ^ 0 ^ 0), (1 ^ 0) * (0 * 4 + 3) + (0 ^ 1)))]))
-print((l10lOO11O10ll00lO1l11(lllll100O110lOll1l010((1 * 3 + 0) * (0 * 6 + 3
-    ), 0 * 5 + 2), l10lOO11O10ll00lO1l11(0 * 2 + 1, 2 ^ 0) + (0 * 2 + 1)) +
-    (0 * 6 + 1 ^ 0) ^ (lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 6 + 
-    0, 3 ^ (2 ^ 5)), 1 ^ 0) ^ (0 * 2 + 0) * (1 * 4 + 1) + (2 ^ 1))) %
-    lllll100O110lOll1l010((0 ^ 2) * 3, 0 * 4 + 2) == (0 * 4 + 0) * (2 ^ (0 *
-    4 + 0 ^ 0 * 3 + 1) ^ ((0 * 4 + 0) * 4 + 0) * (0 * (0 * 6 + 4) + 3) + 0) +
-    (l10lOO11O10ll00lO1l11(0, (0 ^ 1) * O1l1110000000000llOl1(6 ^ 1, 0 * 6 +
-    2) + lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 2 + 0, 2 ^ 1), 0 *
-    2 + 1)) + (l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (0 * 5 + 4),
-    0), 0 * 5 + 3 ^ 0) + (0 * 5 + 0))), lO0l0OOlll1OO01ll0O11(
-    O1l1110000000000llOl1(O1l1110000000000llOl1(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(2 * 6 + 1, 0 ^ 3 ^ (1 ^ 0)), 
-    l10lOO11O10ll00lO1l11(0, 5) + (0 * 5 + 1)), 27 ^ (36 ^ 31)),
-    O1l1110000000000llOl1(0 * 5 + 0 ^ 0 * 6 + 3, O1l1110000000000llOl1(5, 1 ^
-    0 ^ 0) ^ O1l1110000000000llOl1(0 ^ 2, 1) * (1 * 2 + 1) + (0 * 3 + 0 ^ (
-    3 ^ 1)))), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0 * 6 + 1 ^ 0, 2) +
-    lllll100O110lOll1l010((0 * 2 + 0) * (1 ^ 2), 0), 7 ^ 0),
-    O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0, 5 ^ 3) + (0 * 3 + 0), (0 *
-    6 + 0) * (2 * 2 + 1) + 2)), l10lOO11O10ll00lO1l11(0 * 6 + 0,
-    O1l1110000000000llOl1(0, 1 * 5 + 0)) + lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0 * 4 + 0, 6), 0) ^ (0 ^ (1 ^ 0) ^ 0 * 3 + (0 * 4 +
-    0)))) == lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * (
-    l10lOO11O10ll00lO1l11(0, 5 ^ 0) + 3) + 0, lllll100O110lOll1l010((0 * 6 +
-    1) * lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    (0 * 3 + 0) * (2 * 2 + 1), 0), 1 ^ 5), (0 * 2 + 0) * 5 + (0 ^ 3)), 
-    l10lOO11O10ll00lO1l11(0, 1 ^ 2) + (3 ^ 0 * 2 + 1))), 0 * 4 + 0), 
-    lO0l0OOlll1OO01ll0O11(lllll100O110lOll1l010(O1l1110000000000llOl1((
-    l10lOO11O10ll00lO1l11(0, 2) + (0 * 5 + 0)) * (0 * 5 + 4) + (0 ^ 1), 
-    l10lOO11O10ll00lO1l11(0 * (0 ^ 3) + 0, 0 * 5 + 3) + 0) * (
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, 3 ^ 7), 0 * 5 + 0) * (3 ^ 0 * 4 + 1), 0 * 5 + 
-    1 ^ 0), (0 * 5 + 0 ^ 1) * (2 * 3 + 0) + lllll100O110lOll1l010(0 * 2, 0)
-    ) + lllll100O110lOll1l010(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0,
-    1 ^ 3), 0 * 3 + 0) * ((1 ^ 0) * (1 * 4 + 1) + 1), 0 * 3 + 0)),
-    lllll100O110lOll1l010(((0 * 2 + 0) * O1l1110000000000llOl1(3, 0 * 3 + 0
-    ) + (0 ^ 2)) * (0 ^ (0 ^ 2)), l10lOO11O10ll00lO1l11((0 * 5 + 0) * (1 * 
-    5 + 1) + 0, 1 ^ 7) + (0 * 2 + 0))), O1l1110000000000llOl1(
-    l10lOO11O10ll00lO1l11(0, 1 * 3 + 1) + 0, lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(0, 0 ^ (0 ^ 1) ^ (0 * 6 + 1
-    ) * (0 * 4 + 2) + 0) + 0, O1l1110000000000llOl1(0 * (0 ^ 4) + 1, 0 * 2 +
-    0 ^ l10lOO11O10ll00lO1l11(0 * 6 + 0, 7 ^ 3) + 2)), (0 * 5 + 0) * 4 + (0 *
-    6 + 3) ^ lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 4 ^ 0), 0), 3 ^ (7 ^ 2)),
-    l10lOO11O10ll00lO1l11(0, 0 ^ 5) + (1 ^ 0))))) == 0, 
-    lO0l0OOlll1OO01ll0O11(O1l1110000000000llOl1(O1l1110000000000llOl1(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 2 + 0 ^ 2 * 5 + 2, 5 ^ 
-    1), (0 * 3 + 0) * (2 ^ 6) + 3), lllll100O110lOll1l010((13 ^
-    O1l1110000000000llOl1(3, 1 * 5 + 1)) * ((0 * 5 + 1) * (2 ^ 0) + (1 ^ 0)
-    ), lllll100O110lOll1l010(0 * 2, 0))), lllll100O110lOll1l010((0 * 3 + 0 ^
-    (1 ^ 0) * O1l1110000000000llOl1(1, 4 ^ 1) + (0 * 2 + 1)) *
-    O1l1110000000000llOl1((0 * 3 + 0) * lllll100O110lOll1l010(0 * (1 * 5 + 
-    1), 4) + (0 * 4 + 3), O1l1110000000000llOl1(0, 0 * 6 + 0 ^ 1 * 6 + 0)),
-    l10lOO11O10ll00lO1l11(0, l10lOO11O10ll00lO1l11(0 * 5 + 0, 2 * 3 + 0) +
-    (1 * 2 + 1)) + 0 ^ (0 * 3 + 0) * lllll100O110lOll1l010((0 ^ 1) * 3, 1 ^
-    3) + lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 4 + 0, 3), 0 * 6 +
-    2))), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(O1l1110000000000llOl1
-    (0 * 4 + 0, 1 * 2 + 1) ^ (0 * 6 + 0) * (1 ^ 0 * 3 + 2) + (0 ^ 1 ^ 0 * 2 +
-    0), O1l1110000000000llOl1(O1l1110000000000llOl1((0 * 3 + 0) * 6 + (0 ^ 
-    1), O1l1110000000000llOl1(1 ^ 0 * 3 + 0, 2 ^ 0 * 5 + 1)), 1 * 6 + 0)), 
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0,
-    O1l1110000000000llOl1(0 * 5 + 1 ^ 0, 3 ^ 1 ^ 0 * 5 + 1)), 0 * (0 * 4 + 
-    2) + 0), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 2 + 0 ^ 0 * 2 +
-    1 ^ 0 * 6 + 0, lllll100O110lOll1l010((3 ^ 1) * ((0 * 3 + 0) * 6 + 3), 0 *
-    2 + 0)), 0 * 2 + 0)) + O1l1110000000000llOl1(l10lOO11O10ll00lO1l11(0, 5 ^
-    3) + 0 ^ 0 * 2 + (0 * 2 + 1), 1 * (0 * 4 + 2) + 1))) ==
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * (0 ^ 1 ^ (2 ^ 1)) + 0,
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 ^ 0 * 6 + 1, 0 * (1 * 4 +
-    1) + 1 ^ O1l1110000000000llOl1(1 ^ 2, 0)), (0 * 5 + 0) * (4 ^ 2) + (0 *
-    (1 ^ 2) + 0))), 0), lO0l0OOlll1OO01ll0O11(O1l1110000000000llOl1(0 ^ 2 ^
-    0, 1) ^ (l10lOO11O10ll00lO1l11(0 * 2 + 1, 0 * 6 + 1 ^ 0 * 5 + 2) + (0 *
-    3 + 0)) * (l10lOO11O10ll00lO1l11(0, 0 ^ 6) + 4) + ((0 ^ 1) * 2 + 0) ^ (
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (
-    2 * 2 + 1), 0 * 6 + 1) * (2 ^ 7 ^ 0 * 4 + 1) + (0 * 5 + 3),
-    lllll100O110lOll1l010((0 * 3 + 0) * (6 ^ 2), 0 ^ 3)), 1 * 3 + 0 ^ (1 ^ 
-    0)) ^ lllll100O110lOll1l010(0 * 5, 4)), l10lOO11O10ll00lO1l11(
-    l10lOO11O10ll00lO1l11(0 * ((3 ^ 1) * 3 + (0 * 5 + 0)) + (0 * 5 + 0), 6 ^
-    3) + (l10lOO11O10ll00lO1l11(1 ^ 0, 3 ^ 0 * 3 + 0) + (
-    l10lOO11O10ll00lO1l11(0, 0 ^ 6) + (0 * 3 + 0))), (0 ^ 1 ^ 0) *
-    O1l1110000000000llOl1(3 ^ 1, 0) + 0) + ((0 * 5 + 0) * (6 ^ 0) + (0 * 6 +
-    0))) == l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0, (1 ^ 0) * 3 + (0 * 5 + 1)), (0 * 4 + 0) * (0 *
-    5 + 3 ^ (2 ^ 4)) + (0 * (0 * 4 + 3) + (0 * 6 + 0))),
-    lllll100O110lOll1l010(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    lllll100O110lOll1l010(0 * (1 * 5 + 1), 0), 1 ^ (2 ^ 0) ^
-    O1l1110000000000llOl1(1 ^ 0, 0)), 0 * (0 ^ 3) + 0) * ((1 * 2 + (
-    l10lOO11O10ll00lO1l11(0 * 5 + 0, 3) + (0 * 3 + 1))) *
-    O1l1110000000000llOl1(0, 1 ^ (2 ^ 1)) + 0), 1 ^ 0 ^
-    O1l1110000000000llOl1(0, 1 ^ 2))) + lllll100O110lOll1l010(0 * (1 * (1 ^
-    2) + (1 ^ 0)), 0 * 2 + 0))
-print(''.join(filter(lambda O11lOOO10ll10O1O1010O: lO0l0OOlll1OO01ll0O11(
-    ord(O11lOOO10ll10O1O1010O), 0 * 6 + 4) != 0,
-    'd|\x1c`\x00X\x00p$`\x10\\DX4')).join(filter(lambda
-    ll1O0OlO1lO1O1O0Ol0lO: ord(ll1O0OlO1lO1O1O0Ol0lO) %
-    O1l1110000000000llOl1(1 * 2 + 1, 1) != 0, ' z*\x1e\x18,2>rv rL|"')).
-    join(filter(lambda l10OOO1OO1l10O1llO11O: ord(l10OOO1OO1l10O1llO11O) %
-    (3 ^ 6) != 0 * lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 2 + 1, 1 ^
-    2), 2) + 0, 'A\x0f#_d_\x05(d-xU_\x19(')).join(chr(O1l1110000000000llOl1
-    (O0000lO1lOOO1100010lO, l110Ol1OO010l1Ol1OO10)) for 
-    l110Ol1OO010l1Ol1OO10, O0000lO1lOOO1100010lO in zip(
-    b'O\xb2$\xa4\xf0\x94\x9f\xe0\x85\xe46\xbeh\x01\xc3a\xb1\xb9M\x18\xc9\xc9Gv\xbc^\xc5\xe6\xd4<\xceP\xe4\xcc\xc2'
+ print(''.join(filter(lambda lOOOO011O1O0ll0lllOO1: ord(
+     lOOOO011O1O0ll0lllOO1) % 3 != 0, '9Zi\tEE\x06*9ll<\x00\x1ec')).join(
+     chr(OO11lO0101l01O0OlO1O1(Ol01OO1lO1lOlOl11ll0l, lll0llO1O1lO1lO11O0OO
+     )) for lll0llO1O1lO1lO11O0OO, Ol01OO1lO1lOlOl11ll0l in zip(
+     b'\xcf\xb5\x91\xa2\x08\x0c\xf4\xcb=\x97;\xad\xd0\xd1\xcf\xd8',
+     b'\x86\x95\xe2\xc7m,\x9c\xa4J\xb7R\xd9\xf0\xb8\xbc\xf9')))
+ll11ll010ll0lO0OOll1O = O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00((0 * 4 + 2) * (0 * 5 + 2), 
+    0 * 4 + 1) * O1OOl0l001l00l01llO00(((0 * 6 + 0) * (0 ^ 2) + 0) * (0 ^ 3 ^
+    5), 4) + (0 ^ 1 ^ 1 * 3 + (0 * 5 + 0)), 1 ^ 6 ^ 2),
+    O1OOl0l001l00l01llO00((0 * 4 + 0 ^ 0 * 6 + 1 ^ 0 * 5 + 0 ^ 0) *
+    OO11lO0101l01O0OlO1O1(0 * 2 + 0, 0 ^ (1 ^ 0) ^ 0 * 3 + 2), 0)), 0 * 3 + 0)
+print(ll11ll010ll0lO0OOll1O, getattr(Data, O1OOl0l001l00l01llO00(
+    O1OOl0l001l00l01llO00(chr(97), chr(25 * 4 + 0)) + O1OOl0l001l00l01llO00
+    (chr(100), ''.join(chr(O1O00l0O1OOO11100l1l1 ^ l11ll01l1ll110OO1ll1O) for
+    l11ll01l1ll110OO1ll1O, O1O00l0O1OOO11100l1l1 in zip(b'\x15n', b'J\\'))),
+    ''.join(filter(lambda OO1Ol01O010llll1110OO: ll0O1Ol0l1l01OlOlOl00(ord(
+    OO1Ol01O010llll1110OO), 5 ^ 3) != 0, '\x120\x18l*r6\x06x\x06*lN\x12`'))
+    .join(filter(lambda l00l1l0l1Ol1000l1l1O1: ll0O1Ol0l1l01OlOlOl00(ord(
+    l00l1l0l1Ol1000l1l1O1), 2 * 2 + 0) != 0, ',P\x1cH\x0c(\x18(| l8|0\x14')
+    ).join(chr(OO11lO0101l01O0OlO1O1(lOO10Ol1llO11O0O0Ol00,
+    Ol1OlO0l0O01l00Oll10l)) for Ol1OlO0l0O01l00Oll10l,
+    lOO10Ol1llO11O0O0Ol00 in zip(b'\xa6\xf1\xe7\xc0\xd9(',
+    b'\xf9\x92\x8b\xa1\xaa['))))(ll11ll010ll0lO0OOll1O), Data().
+    add_2_instance(ll11ll010ll0lO0OOll1O), Data().add_2_static(
+    ll11ll010ll0lO0OOll1O), lOOl001O0l1ll00ll0llO(ll11ll010ll0lO0OOll1O,
+    None), l1l1l011OO1l1l1O0l011(ll11ll010ll0lO0OOll1O,
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(ll11O1ll01lO11Ol101OO(0, 1 ^ 4) + (0 * 6 + 0), 
+    ll11O1ll01lO11Ol101OO(0 * 5 + 0, 0 ^ 4) + 0 ^ (5 ^ (1 ^ 0)) ^
+    OO11lO0101l01O0OlO1O1(0 ^ 1, 0)), O1OOl0l001l00l01llO00(((0 * 4 + 0) *
+    (0 * 6 + 0 ^ 0 * 6 + 2) + (0 * (7 ^ 3) + 0)) * (7 ^ 2), 0)),
+    OO11lO0101l01O0OlO1O1(0, ll11O1ll01lO11Ol101OO(0 * 5 + 0 ^
+    O1OOl0l001l00l01llO00((0 * 5 + 0) * (1 * 3 + 1), 0 * 5 + 1), (0 * (3 ^ 
+    7) + 0) * (3 ^ 1 * 4 + 1) + (3 ^ 1)) + (0 * 5 + 0 ^ (1 ^ 0)))), 3 ^ 0 ^
+    0 * 3 + 1)), O1OOl0l001l00l01llO00(O1OOl0l001l00l01llO00(
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00(O1OOl0l001l00l01llO00(
+    48488007018658 * (0 * 4 + 3), 0 * 5 + 1) * (6 ^ 3), 0 * 4 + 0), (
+    3401231436234 ^ 7700487592872 ^ 431001224992 * 3 + 0) *
+    O1OOl0l001l00l01llO00((0 * 2 + 0) * (5 ^ 3), 0 ^ 5) + (
+    ll11O1ll01lO11Ol101OO(0 * 6 + 0, 3 ^ 0) + 2)) * O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(0 * 3 + 0 ^ (0 ^ 2), OO11lO0101l01O0OlO1O1(0 * 5 +
+    0, 0 ^ 2)), 0 ^ 1), OO11lO0101l01O0OlO1O1(0 * 4 + 0, 0 ^ 2)) / (
+    ll11O1ll01lO11Ol101OO(ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00((
+    56219821954277 ^ 103473082791048) * (2 * 3 + 0), 0 * 5 + 1) * 2 + (0 * 
+    5 + 0), OO11lO0101l01O0OlO1O1(OO11lO0101l01O0OlO1O1(1 ^ 0, 0 ^ 3), 2 * 
+    3 + 1)) + O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0 * 3 + 0, 6 ^ 1 ^
+    1), 0 * 6 + 1 ^ 2), ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00(0 * 5, 
+    1), 7 ^ 2) + 0) + O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, 
+    ll11O1ll01lO11Ol101OO(0 ^ 1, 7 ^ 3) + OO11lO0101l01O0OlO1O1(0 * 4 + 0, 
+    0 ^ 1)), OO11lO0101l01O0OlO1O1(3 ^ 1, 0) ^ ll11O1ll01lO11Ol101OO(0, 3 ^
+    0) + (1 ^ 0))), llOl0OOl0O11l0OOlO10O(O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(ll11O1ll01lO11Ol101OO(ll11O1ll01lO11Ol101OO(
+    26140836792978 * 3 + 1, 3 * 2 + 0) + (0 * 6 + 5) ^ 55436797814742, (0 *
+    2 + 0 ^ (2 ^ 0)) * (3 ^ (1 ^ 0)) + 0) + (0 * 4 + 2), 0 * (0 * 5 + 3) +
+    (0 ^ 1) ^ (ll11O1ll01lO11Ol101OO(0 * 6 + 0, 4 ^ 0) + (0 * 6 + 0)) * (0 *
+    2 + 0 ^ 1 * 5 + 1) + (0 * 5 + 3 ^ 0 * 6 + 0)), O1OOl0l001l00l01llO00(
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0 * 5 + 0, 2), 0 * 4 + 0) *
+    (1 ^ 3 ^ (7 ^ 0 * 5 + 3)), OO11lO0101l01O0OlO1O1(0 * 2 + 0, 1 ^ 0))),
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00((672425601935642 * 6 + 3) *
+    4, 3) ^ 33450886664506172, 866695882794719 * 4 + 3 ^ ((89792312328410 *
+    3 + 1) * (1 ^ 3) + 0) * ((0 * 2 + 0) * 3 + 2) + (ll11O1ll01lO11Ol101OO(
+    0 * 5 + 0, 1 * 4 + 2) + 0)))), OOOll11l111ll0000l1OO(
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00((0 * 3 + 0) * (0 ^ 3 ^ 0 * 
+    3 + 0), OO11lO0101l01O0OlO1O1(0, 1)), ll11O1ll01lO11Ol101OO(0 * 6 + 1, 
+    ll11O1ll01lO11Ol101OO(1, 1 * 2 + 0) + 0) + (0 * 6 + 0) ^
+    O1OOl0l001l00l01llO00(0 * (2 * 3 + 0), 0 * 2 + 1) ^ 0)))
+print(''.join(filter(lambda O0l00llO00Ol100lO1l0O: ord(
+    O0l00llO00Ol100lO1l0O) % 2 != 0, '\x06(\x0c\x06XP\n\x0ed.DThXN')).join(
+    filter(lambda O1011O10100001l0Ol11O: ord(O1011O10100001l0Ol11O) % (0 * 
+    3 + 2) != O1OOl0l001l00l01llO00(0 * 4, 0 * 6 + 0),
+    'l>z8|JR\x1an6>\x08D.\x14')).join(filter(lambda O1l100001OOOO0l01O0O0: 
+    ord(O1l100001OOOO0l01O0O0) % (ll11O1ll01lO11Ol101OO(
+    OO11lO0101l01O0OlO1O1(1, 0 * 3 + 0), 1 * (0 * 5 + 4) + (0 * 2 + 1)) +
+    O1OOl0l001l00l01llO00((0 * 6 + 0) * 4, 0)) != O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(0, OO11lO0101l01O0OlO1O1(1, 3 ^ 0)), 0 * 2 + 0),
+    '\x142d\nUddKs2\x05i((7')).join(filter(lambda OOOOOlll11l1O0l110O01: 
+    ll0O1Ol0l1l01OlOlOl00(ord(OOOOOlll11l1O0l110O01), OO11lO0101l01O0OlO1O1
+    (0 * 4 + 2 ^ 0 * 2 + 1, 0 * (4 ^ 1) + (0 ^ 1))) != 0 * 6 + 0,
+    '||\n.\x1cD \x02Z\x10.0v\x18\x10')).join(chr(OO11lO0101l01O0OlO1O1(
+    l00O0O1100lOO0l1O0ll1, O110l0OOOOl00O0l0O1l1)) for 
+    O110l0OOOOl00O0l0O1l1, l00O0O1100lOO0l1O0ll1 in zip(
+    b'\xd8[nv#\xfd\xfe\xd52\xe7\r\x99\x98\xa6Z\x11\xe1\x89\x93\xdcu\xa9A\x84\x16m\x80T8M~8\xe5\\\xfd\xc8\xe9\rE\xe8O%\xc0\xc4&|\xef\x86\x14\x0bx'
     ,
-    b'\n\xcaT\xc1\x93\xe0\xfa\x84\xbf\xc4b\xcc\x1dd\xe35\xc3\xcc(8\x9d\xbb2\x13\x9c\n\xb7\x93\xb1\x1c\x9a"\x91\xa9\xc8'
+    b'\x9d#\x1e\x13@\x89\x9b\xb1\x08\xc78\xae\xb8\x93c1\xd4\xb0\xb3\xe9L\x89t\xbd6_\xb8t\x08cM\x08\xd5l\xcd\xf8\xd9=u\xd8\x7f\x15\xf0\xf4\x16L\xdb\xa698r'
     )))
-print(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(8 ^
-    4, 7 ^ 3) ^ 7 * (5 ^ 3 ^ 2) + (0 ^ 3) ^ 0 * ((0 * 3 + 1) * 5 + (0 ^ 1)) +
-    (0 * (1 * 2 + 1) + (0 ^ 1)), O1l1110000000000llOl1(0 * 3 + 0, 0 * 5 + (
-    3 ^ 0))), 0) % lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    O1l1110000000000llOl1(O1l1110000000000llOl1(0, 0 * (1 * 4 + 0) + 1), (0 *
-    5 + 0) * (5 ^ 0) + 3), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 
-    3 + 2 ^ 0, lllll100O110lOll1l010(0 * ((0 ^ 1) * (1 * 3 + 1) + 3 ^
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 6 + 1, 2), 0 * 4 + 1)),
-    l10lOO11O10ll00lO1l11(0 * 5 + 0, 4) + (0 ^ 3))), 0 * 6 + 0)), 
-    l10lOO11O10ll00lO1l11(0, lllll100O110lOll1l010((0 * 4 + 0) * (0 * 5 + 4
-    ), 0 * 4 + 3) * 2 + 0) + (0 * 5 + (0 * 6 + 0 ^ (5 ^ 1)))) == 
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * 2, 0 * 2 + 0), (0 * 5 +
-    1) * 6 + (0 * 3 + 0)) + lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 *
-    6 + 0) * (1 * 5 + 1) + 0, 6), 0), lO0l0OOlll1OO01ll0O11(
-    O1l1110000000000llOl1(lllll100O110lOll1l010((48 ^ 24) * 2, 0 * 3 + 0) ^
-    (18 ^ 55), (l10lOO11O10ll00lO1l11(2 ^ 6, 6) + 2) * (0 * 3 + 2) + (
-    l10lOO11O10ll00lO1l11(0, 1 * 4 + 2) + (0 * 5 + 0))) ^
-    O1l1110000000000llOl1(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * (
-    1 * 6 + 0) + (0 * 3 + 0), (0 * 4 + 1) * 2 + (0 * 4 + 1)), 
-    l10lOO11O10ll00lO1l11(0 * 3 + 0, 0 * 5 + 3) + (0 * 3 + 0)),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (
-    1 * 6 + 0), 0 ^ 1) ^ 0, l10lOO11O10ll00lO1l11(0 ^ 1, (0 * 4 + 1) * 3 + 
-    1) + 1), l10lOO11O10ll00lO1l11(0, 2 ^ 1) + 1)), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 
-    3 + 0) * (0 * 6 + 4) + (0 * 6 + 0), lllll100O110lOll1l010((0 * 3 + 1) *
-    (2 ^ 6 ^ (1 ^ 0)), l10lOO11O10ll00lO1l11(0 * 5 + 0, 1 ^ 2) + 1) ^ 0),
-    O1l1110000000000llOl1(O1l1110000000000llOl1(0, 0 ^ 0 * 5 + 1),
-    lllll100O110lOll1l010(O1l1110000000000llOl1(0 ^ 1, 0) * (1 * 2 + 1), 0 *
-    4 + 0))), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0,
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 6 + 0) * (7 ^ 3) + (1 ^
-    0), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(1 ^ 0, 6), 0)), 0)), 
-    O1l1110000000000llOl1(0 * 6 + 1, 0) ^ (1 ^ 0 ^ (3 ^ 7)))),
-    lllll100O110lOll1l010((0 * 5 + 0) * 3, 0 * 3 + 0))) ==
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(0, 0 * 4 + 3) + (
-    l10lOO11O10ll00lO1l11(0, (1 ^ 0) * (2 ^ 7) + (0 ^ 1)) + ((0 * 6 + 0) *
-    (1 * 2 + 1) + (0 * 2 + 0))), O1l1110000000000llOl1(
-    lllll100O110lOll1l010(0 * (0 * 6 + 2), 1), 2 * 3 + 1)), 
-    l10lOO11O10ll00lO1l11(0, 5) + 0), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (
-    2 ^ 6), 0), (0 * 4 + 1) * 3 + 1) + 0, lllll100O110lOll1l010(0 * (0 * 6 +
-    4), 0 * 4 + 0) ^ (0 * (1 * 4 + 2) + (0 ^ 1) ^ (0 * 3 + 0 ^ 2))), 
-    l10lOO11O10ll00lO1l11((0 * (1 * 2 + 0) + 0) * (0 * 4 + 2 ^ (3 ^ 4)) + (
-    l10lOO11O10ll00lO1l11(0, 2) + (0 * 5 + 0)), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(1, 0),
-    lllll100O110lOll1l010((0 * 2 + 1) * 3, 2)), 0)) + (((0 * 2 + 0) * (2 ^ 
-    6) + 0) * (0 * (1 * 3 + 2) + (2 ^ 6)) + (1 ^ 1 * 2 + 1)))),
-    lllll100O110lOll1l010(((l10lOO11O10ll00lO1l11(0 * 6 + 0, 3) + 0) * ((0 *
-    (0 ^ 2) + (0 * 5 + 0)) * (0 * 5 + 4) + (0 * (1 * 3 + 2) + 3)) + 0) * ((
-    1 ^ 0) * (0 * 6 + 5) + (1 ^ 0)), 0 * (0 * 6 + 1 ^ 1 * 2 + 1) + (0 * 4 +
-    0))), (6 * O1l1110000000000llOl1(3, 0 ^ 1) + (0 ^ 0 * 6 + 1)) % (
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 6 + 0) *
-    O1l1110000000000llOl1((0 * 2 + 0) * 4 + 0, 0 ^ 6 ^ (2 ^ 1)) + 0,
-    O1l1110000000000llOl1(lllll100O110lOll1l010(0 * 6, 0 * 2 + 0) * 6 +
-    O1l1110000000000llOl1(0, 2), 0 * (6 ^ 0) + 1)), (0 * 4 + (0 * 3 + 0)) *
-    (5 ^ 1) + lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 0 * 5 + 0 ^ 6),
-    0 * 3 + 0)) * lllll100O110lOll1l010((0 ^ 1 ^ 0) * (
-    l10lOO11O10ll00lO1l11(0, 5 ^ 1) + (0 * 6 + 3) ^ (0 * 3 + 1) * (4 ^ 0) +
-    (2 ^ 0)), 0 * 6 + 0) + ((0 * 3 + 0) * (l10lOO11O10ll00lO1l11(0, 0 * (5 ^
-    3) + 4) + (1 * 2 + 0 ^ 0)) + (l10lOO11O10ll00lO1l11(0, 1 * 4 + 1) + (0 *
-    2 + 0)) ^ O1l1110000000000llOl1(0, O1l1110000000000llOl1(2 ^ 0 ^ 0 * 5 +
-    0, O1l1110000000000llOl1(0 * 5 + 0, 1))))) == l10lOO11O10ll00lO1l11(0, 
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010((0 * 2 + 0) * 3, (0 * 5 + 0
-    ) * (1 * 5 + 0) + 0), 1 * 5 + 2 ^ 3 ^ 1) + O1l1110000000000llOl1(
-    O1l1110000000000llOl1(1 * 5 + 0, l10lOO11O10ll00lO1l11(0, 0 ^ 4) + 2),
-    lllll100O110lOll1l010(0 * ((1 ^ 0) * (3 ^ 0) + 1), 0 * 5 + 3))) + ((
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (1 * 4 + 1), 0), 
-    l10lOO11O10ll00lO1l11(0 ^ 1, 1 * 3 + 0) + (0 * 4 + 1)) + (0 * 3 + 0)) *
-    lllll100O110lOll1l010(lllll100O110lOll1l010(0 * 3, 1) * (1 ^ 1 * 3 + 1),
-    (0 * 6 + 0) * 3 + 0) + 0), lO0l0OOlll1OO01ll0O11(l10lOO11O10ll00lO1l11(
-    O1l1110000000000llOl1(23, l10lOO11O10ll00lO1l11(0 * 6 + 0, 1 * 3 + 2 ^
-    (0 ^ 1)) + (0 * 2 + 0)), O1l1110000000000llOl1(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(0, O1l1110000000000llOl1(6,
-    0)) + (0 * 4 + 0), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * (1 *
-    6 + 0) + 0, 6), 2 ^ 0)), 0 * 2 + 0 ^ 0 * 2 + 1), lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(0 * 5 + 0, 5), 0) ^ 0 * 6 + 2)) +
-    O1l1110000000000llOl1(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 0 *
-    5 + 3), 1 ^ 0), 0), lllll100O110lOll1l010(lllll100O110lOll1l010(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 2 * (0 * 3 + 2) + 1), 1 ^
-    0) * ((0 * 6 + 1) * (1 * 4 + 0) + 0), lllll100O110lOll1l010(0 * (0 * 6 +
-    3), 0) ^ lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0,
-    O1l1110000000000llOl1(1 * 5 + 1, 1 * 2 + 0)), O1l1110000000000llOl1(1 ^
-    0, 1 * 3 + 0))) * lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(0 * (
-    1 ^ 3), 0), 0 * 6 + 2 ^ 2 * 2 + 0), 0), (0 * 2 + 0 ^ 1) * (0 ^ 3) + (0 *
-    4 + 0)), lllll100O110lOll1l010(0 * (0 * 6 + 4), 0 ^ 2)),
-    lllll100O110lOll1l010((0 * 6 + 0) * lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010((l10lOO11O10ll00lO1l11(0, 2 *
-    2 + 0) + 0) * (7 ^ 2), 1), lllll100O110lOll1l010((0 ^ 0 * 6 + 1) * (0 ^
-    0 * 6 + 3), 2)), lllll100O110lOll1l010(0 * ((0 * 3 + 1) * (3 ^ 7) + (0 *
-    3 + 2)), 0 * 6 + 1)), lllll100O110lOll1l010((0 * 4 + 0) * ((0 * 5 + 1) *
-    (3 * 2 + 0) + 0), 0 * (0 * 5 + 4) + (0 * 2 + 0))))) ==
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(l10lOO11O10ll00lO1l11(0 * 6 +
-    0, 7 ^ 0 * 4 + 3) + (0 * 2 + 0), O1l1110000000000llOl1(3 ^ 1, 0)), 0), 
-    lO0l0OOlll1OO01ll0O11(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(((2 ^
-    0) * 6 + (2 ^ 1) ^ 1 * 2 + 1) * lllll100O110lOll1l010((0 ^ (1 ^ 0)) * (
-    l10lOO11O10ll00lO1l11(0 * 5 + 0, 0 ^ 4) + (0 * 5 + 3)), 0 * 4 + 1),
-    lllll100O110lOll1l010(0 * (0 ^ 2), (0 * 2 + 0) * (7 ^ 2) + 1)), 
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, lllll100O110lOll1l010((0 *
-    6 + 1) * (1 * 2 + 0), 1)), 1 ^ 0) ^ (0 * 5 + 0 ^ 3)) +
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 * 4 + (0 * 3 + 0), (0 * 4 +
-    3) * O1l1110000000000llOl1(0 * 2 + 0, 3 ^ 1) + 0), 0 * (1 * 3 + 0) + 0),
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010((0 * 3 + 0) * (3 ^ 5), 0), 
-    2) + 0 ^ O1l1110000000000llOl1(2 * 6 + 1 ^ (0 ^ (2 ^ 1)), (0 * (0 * 6 +
-    2) + (0 * 3 + 0) ^ (0 ^ 1 ^ 3)) * (0 * 4 + 2) + O1l1110000000000llOl1((
-    0 * 5 + 0) * 5 + (0 * 2 + 0), lllll100O110lOll1l010((0 * 2 + 0) * (2 ^ 
-    1), 0 * 2 + 1)))) == lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 6 +
-    0) * (0 * 3 + 2) + 0, (0 ^ 1) * (0 * 6 + 3) + 2), (0 * 6 + 0) * (0 * 5 +
-    4) + (0 * 4 + 0)))
-print(''.join(filter(lambda O01Ol1O1l0l0O1OO1Oll1: ord(
-    O01Ol1O1l0l0O1OO1Oll1) % 5 != 0, 'sn(\x19FAK<\x00\x05n7}7}')).join(
-    filter(lambda O011O0O01110l000l110l: lO0l0OOlll1OO01ll0O11(ord(
-    O011O0O01110l000l110l), 4 ^ 1) != 0, 'sZ72\x05ds\x00\x19\x00<s(\x1e<'))
-    .join(filter(lambda l1O01lOl0llO11l10l111: lO0l0OOlll1OO01ll0O11(ord(
-    l1O01lOl0llO11l10l111), 0 ^ 1 ^ 0 * 6 + 3) != lllll100O110lOll1l010(0 *
-    3, 0 * 3 + 0), 'h*\x18N\x1c<B\x10\x00\x14t\x04P\x14h')).join(filter(lambda
-    O1l10l111l10OOl0O0l1l: lO0l0OOlll1OO01ll0O11(ord(O1l10l111l10OOl0O0l1l),
-    1 * 3 + 1 ^ 0) != 0, 'lD\x0cdt$XX\x10X\x18,l$X')).join(filter(lambda
-    lO10OO0O10llO1ll111O1: lO0l0OOlll1OO01ll0O11(ord(lO10OO0O10llO1ll111O1),
-    lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(
-    l10lOO11O10ll00lO1l11(0, 0 * 4 + 2) + (0 * 4 + 0), 0 ^ 1), 0 ^ (3 ^ 6)),
-    l10lOO11O10ll00lO1l11(0 * 4 + 0, 0 ^ 2) + (0 * 6 + 0) ^ (0 ^ 0 * 4 + 1)
-    )) != lllll100O110lOll1l010(0 * (1 ^ 3), lllll100O110lOll1l010(
-    lllll100O110lOll1l010(0 * (0 * 5 + 2), 0) * 4, 0)),
-    'f\x12\x12T0\x00*N`B\x120B\x06\x00')).join(chr(O1l1110000000000llOl1(
-    l01l0lO10000O10l00Ol0, ll1llOl1OOll00O111Oll)) for 
-    ll1llOl1OOll00O111Oll, l01l0lO10000O10l00Ol0 in zip(
-    b'\xca\x98\xbfJ\x15\x0f\x1f\xa8_h\x11\x14h\xa0\xdc\xaf\\\xab\xb3\xc2\x86\x86\xde\xb8^\x1d\xb1R\xba1\x83\x9b\xda\xbc\x8c\x94\x9c\xb7\xf5\xb9'
+ll11ll010ll0lO0OOll1O = ll11ll010ll0lO0OOll1O + O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00(((0 * 3 + 0) * 2 + (
+    ll11O1ll01lO11Ol101OO(0, 0 ^ 5) + 0)) * O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(0 * 4 + (1 ^ 0), ll11O1ll01lO11Ol101OO(3, 0 * 4 +
+    2) + (0 * 5 + 0)), 0), ll11O1ll01lO11Ol101OO((0 * 2 + 0) * 5 + 0,
+    O1OOl0l001l00l01llO00(O1OOl0l001l00l01llO00((0 * 3 + 0) * 2, 0 ^ 1) * 5,
+    0 * 6 + 1)) + O1OOl0l001l00l01llO00(0 * 5, 1 ^ 3)),
+    OO11lO0101l01O0OlO1O1(OO11lO0101l01O0OlO1O1(0 * 5 + 0, 4), ((0 * 6 + 0) *
+    (0 * 4 + 3) + 0) * (0 * 2 + 0 ^ 0 * 5 + 4) + (0 * 4 + 2))), 
+    ll11O1ll01lO11Ol101OO(ll11O1ll01lO11Ol101OO(0, 0 * (0 ^ 3) + 2) + (0 * 
+    3 + 1 ^ 0), 3 ^ 0) + O1OOl0l001l00l01llO00((0 * 6 + 0) * 6, 0))
+print(ll11ll010ll0lO0OOll1O)
+print(''.join(filter(lambda llOl000OO0ll110l1Ol0l: ord(
+    llOl000OO0ll110l1Ol0l) % 5 != 0, 'U_\n#KF\x00s7\n#\x14#P\x05')).join(
+    filter(lambda l1Ol101Ol1O110O1OO0O1: ord(l1Ol101Ol1O110O1OO0O1) % (2 ^ 
+    0) != 0, 't0\x044\x0c.\x02xd8:h",$')).join(filter(lambda
+    O0010l10111OOO0OO1O01: ord(O0010l10111OOO0OO1O01) % ((0 * 6 + (2 ^ 0)) *
+    O1OOl0l001l00l01llO00(1 * 2, 0) + 0) != 0,
+    '\x04\x0cPhhlxll \x0c\x08((D')).join(chr(OO11lO0101l01O0OlO1O1(
+    l11100O0lOl111l00l0lO, OlO10O0l111lO0000O10l)) for 
+    OlO10O0l111lO0000O10l, l11100O0lOl111l00l0lO in zip(
+    b'\x8cl\x9f\xc9\x07m^H\x002\xd5\xd8\x95',
+    b'\x86^\xa8\xe9=\t;<cW\xa5\xa0\xd0'))[::OO11lO0101l01O0OlO1O1(
+    OO11lO0101l01O0OlO1O1(-3 ^ 0, 3), OO11lO0101l01O0OlO1O1(0 * 6 + 1 ^ 0 *
+    5 + 0, 0 * 5 + 0))])
+Data.internal = O1OOl0l001l00l01llO00(getattr(Data, ''.join(filter(lambda
+    O1O01O01OO00O0l00l1lO: ord(O1O01O01OO00O0l00l1lO) % 5 != 0,
+    '#nA\x1e}U\x14nUnFs\x0f7}')).join(filter(lambda OlOll110l0ll0l0l0O0l1: 
+    ll0O1Ol0l1l01OlOlOl00(ord(OlOll110l0ll0l0l0O0l1), 0 ^ (3 ^ 0)) != 
+    ll11O1ll01lO11Ol101OO(0, 0 * 6 + 2) + 0,
+    "'-\x00c{0o\x00Nc\x18\x03\x1bo\x1b")).join(filter(lambda
+    ll0l11OlOllO11l11l110: ll0O1Ol0l1l01OlOlOl00(ord(ll0l11OlOllO11l11l110),
+    OO11lO0101l01O0OlO1O1(0 * 4 + 3, 5)) != 0,
+    'T\x1e0\x06ZZ\x06r<f6fTH\x1e')).join(chr(ll011lOOO00OlO1001l11 ^
+    lOO010OOOOO11l111OllO) for lOO010OOOOO11l111OllO, ll011lOOO00OlO1001l11 in
+    zip(b'/[X\x1bk-\x89n', b'F5,~\x19C\xe8\x02'))), OO11lO0101l01O0OlO1O1(
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, 0 ^ 
+    ll11O1ll01lO11Ol101OO((0 * 5 + 0) * (6 ^ 2) + 0, (0 * 5 + 1) * (1 ^ 5) +
+    (1 ^ 0)) + (1 ^ 3)), OO11lO0101l01O0OlO1O1((0 * 2 + 0) * (
+    ll11O1ll01lO11Ol101OO(0 * 2 + 0, 1 * 3 + 0) + 2) + (0 * 4 + 0), 0 * (1 ^
+    3) + 1 ^ 0)), 0 * 4 + 0))
+print(ll11ll010ll0lO0OOll1O, getattr(Data, ''.join(filter(lambda
+    OOO1O10O010OO110OlO0O: ord(OOO1O10O010OO110OlO0O) % 3 != 0,
+    "<f\t\x12-{H\x15-'N'3]\x18")).join(filter(lambda O0O10l000O0O01OlO11Ol:
+    ll0O1Ol0l1l01OlOlOl00(ord(O0O10l000O0O01OlO11Ol), 1 * 2 + 0) != 
+    ll11O1ll01lO11Ol101OO(0 * 6 + 0, 6 ^ 0) + 0,
+    'HZRL\n\x02|\x10^tX*\x0c.\x04')).join(chr(OO11lO0101l01O0OlO1O1(
+    OOOO01O0Oll101llOOl0O, O1OOlOO10l0OOl00llOO1)) for 
+    O1OOlOO10l0OOl00llOO1, OOOO01O0Oll101llOOl0O in zip(
+    b'\xcb\x11U\xc2A\x8e\x8cM\x81NV', b'\xaau1\x9ds\xd1\xef!\xe0=%')))(
+    ll11ll010ll0lO0OOll1O), Data().add_2_instance(ll11ll010ll0lO0OOll1O),
+    Data().add_2_static(ll11ll010ll0lO0OOll1O), lOOl001O0l1ll00ll0llO(
+    ll11ll010ll0lO0OOll1O, None))
+print(''.join(filter(lambda l1111O10OOOl11OO1l100: ord(
+    l1111O10OOOl11OO1l100) % (5 ^ 3) != 0 * 4 + 0,
+    '<l\x0c$\x06$TH\x06\x18rHZx\x1e')).join(filter(lambda
+    ll1O1Ol01l1100101l10l: ord(ll1O1Ol01l1100101l10l) % ((1 * 2 + 0) * (2 ^
+    1) + (0 * 4 + 0)) != 0, 'T<*H<\x0c\x18xH\x18\x00Z\x06\x18H')).join(chr(
+    OO11lO0101l01O0OlO1O1(OO1O0O101O0l111OOlO01, lOOO0lOll00OOOO0OOll0)) for
+    lOOO0lOll00OOOO0OOll0, OO1O0O101O0l111OOlO01 in zip(
+    b'\xc5\xef\x157C\xdb\xa9\xcd\t\xff\xfbN\x00[\x1a\xfc\xb4\xf0\xf6(\xd4\xe48\xd7o'
     ,
-    b'\xc0\xfd\xcc&tI?\xcd,\x04pRH\xc5\xaf\xc3=\xed\x93\xa7\xf5\xea\xbf\xfe~x\xc2>\xdbw\xa3\xa1\xbe\xd9\xf8\xf7\xf9\xc7\x8d\xfc'
-    ))[::lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(lllll100O110lOll1l010((-1 * 2 + 1) * (0 * 6 + 5),
-    1 ^ 5), lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(1 ^ 0 * 6 + 0 ^ (0 *
-    3 + 0) * (2 ^ 1) + 0, lllll100O110lOll1l010((0 * 6 + 0) * (2 ^ 1 * 5 + 
-    2), 3)), (0 * 6 + 0) * (6 ^ (1 ^ 3)) + (0 * (1 * 3 + 1) + (0 * 4 + 0)))
-    ), 2 ^ 0), O1l1110000000000llOl1(lllll100O110lOll1l010(
-    l10lOO11O10ll00lO1l11(O1l1110000000000llOl1(0, 0 * 6 + 1),
-    O1l1110000000000llOl1(lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0, 6 ^
-    3), 0 ^ 1), 1 * 2 + 1)), lllll100O110lOll1l010((0 * (4 ^ 2) + 0) *
-    O1l1110000000000llOl1(4, 0 * 4 + 0), 0 * (0 * 6 + 5) + 1)), 
-    l10lOO11O10ll00lO1l11(0, O1l1110000000000llOl1(1 * (4 ^ 0) + (0 * 5 + 2
-    ), O1l1110000000000llOl1(1 ^ 0, 1 * 2 + 0))) + ((0 * 5 + 0) * (2 ^ 6) +
-    (1 ^ 0)))), (0 * 5 + 0) * lllll100O110lOll1l010(l10lOO11O10ll00lO1l11(0 *
-    (1 * 5 + 0) + 1, 0 ^ 2), 0 * (2 ^ 6) + (0 ^ 1)) + (0 * 2 + (1 ^ 0)))])
-print(lO0l0OOlll1OO01ll0O11(''.join(filter(lambda l11O10lOOl1OO1OlOlO1O: 
-    ord(l11O10lOOl1OO1OlOlO1O) % (2 * 3 + 0) != 0, 'N$`6\x00THH`l`B\x00$x')
-    ).join(filter(lambda l0lOOll001O1lO11O0ll0: ord(l0lOOll001O1lO11O0ll0) %
-    (l10lOO11O10ll00lO1l11(1 ^ 0 * 6 + 0, 2) + ((0 * 2 + 0) * (0 * 6 + 3) +
-    (0 * 5 + 0))) != l10lOO11O10ll00lO1l11(0, l10lOO11O10ll00lO1l11(1, 2) +
-    1) + lllll100O110lOll1l010(l10lOO11O10ll00lO1l11((0 * 4 + 0) * (2 * 2 +
-    0) + 0, 1 ^ 0 ^ 4), 0), '\x12(d6d2`\x16d\\@zVz\\')).join(chr(
-    O1l1110000000000llOl1(O111llO0lOOl1Ol1lO1O1, lOO1Ol0l1OOO10O0lOll1)) for
-    lOO1Ol0l1OOO10O0lOll1, O111llO0lOOl1Ol1lO1O1 in zip(
-    b'\x1f\xedH\x1f\xef\xf7\xa1^b\x98\x86A6\xf2|\xc3\xf7_',
-    b'M\x8c&{\x80\x9a\x81<\x1b\xec\xe3a_\x81F\xe3\xd2-')),
-    OOO001ll1l101O0Ol101l(None)))
+    b'\xcf\xdb"\x17w\xec\x89\xf8>\xdf\xcey i-\xdc\x8e\x94\x93\\\xb7\x81H\xaf*'
+    ))[::O1OOl0l001l00l01llO00((ll11O1ll01lO11Ol101OO(-1 ^ 0, 0 * 5 + 4) +
+    (2 ^ 1)) * (0 * 4 + 0 ^ 3), ll11O1ll01lO11Ol101OO(0 * 3 + 0, 0 * 3 + 2) +
+    (1 ^ 0)) ^ O1OOl0l001l00l01llO00(0 * (3 ^ 7), 0 * 6 + 1) ^ 0 * 3 + 0])
+print(ll0O1Ol0l1l01OlOlOl00(OO11lO0101l01O0OlO1O1(ll11O1ll01lO11Ol101OO((0 *
+    5 + 2) * (1 * 4 + 0) + (1 ^ 3), O1OOl0l001l00l01llO00((0 ^ 3) * (3 ^ 1),
+    0)) + (0 ^ 2) ^ (15 ^ 48 ^ 17 * 4 + 3 ^ (0 * 4 + 0 ^ 9 * 3 + 0)), 
+    ll11O1ll01lO11Ol101OO(1 * (0 * 4 + 2) + (0 * 4 + 1), 1 * 6 + 0) + (2 * 
+    2 + 0)), OO11lO0101l01O0OlO1O1(OO11lO0101l01O0OlO1O1(0 * 2 + 0 ^ (12 ^ 
+    0), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, 4), 0) ^ (0 * 4 + 2) *
+    (0 * 6 + 3) + (0 * 6 + 0)), 3 * 2 + 1 ^ 0 * 3 + 2)) ==
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0 * (3 * 2 + 0) + 0, 
+    ll11O1ll01lO11Ol101OO(0, 1 * 4 + 0) + (0 * (6 ^ 2) + (2 ^ 1))), 
+    ll11O1ll01lO11Ol101OO(0 * 2 + 0, 0 ^ 1 * 3 + 0) + (
+    ll11O1ll01lO11Ol101OO(0, 3 ^ 0 ^ 6) + ((0 * 3 + 0) * (5 ^ 0) + (0 * 2 +
+    0)))), ll0O1Ol0l1l01OlOlOl00(ll11O1ll01lO11Ol101OO(0 ^ 28, 2 ^ 0) + 0,
+    OO11lO0101l01O0OlO1O1(7, O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(1 ^
+    0 * 2 + 0, O1OOl0l001l00l01llO00(OO11lO0101l01O0OlO1O1(0 * 4 + 0, 0 ^ 1
+    ) * 5, 0 * 5 + 0)), OO11lO0101l01O0OlO1O1(0 ^ 3, (0 * 5 + 1) * 5 + (0 *
+    6 + 2))))) == O1OOl0l001l00l01llO00(0 * 5, 0), ll0O1Ol0l1l01OlOlOl00(
+    ll11O1ll01lO11Ol101OO(2 * 6 + 0, O1OOl0l001l00l01llO00((0 ^ 1) *
+    O1OOl0l001l00l01llO00((0 * 2 + 1) * (0 * 6 + 3), 1 * 2 + 0),
+    O1OOl0l001l00l01llO00(0 * 3, 0 * 2 + 0))) + (ll11O1ll01lO11Ol101OO(0 * 
+    2 + 0, 0 * 4 + 0 ^ 6) + O1OOl0l001l00l01llO00((0 ^ 2) * 2, 0 * 4 + 0)),
+    O1OOl0l001l00l01llO00((0 ^ 1 ^ 3) * (7 ^ 3), 0)) == 0, 
+    ll0O1Ol0l1l01OlOlOl00(O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO((1 ^ 
+    2) * (0 ^ 4) + (0 * 3 + 2), 2 ^ 0 * 3 + 1), 2 ^ 0),
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00((0 * 4 + 0 ^ 0 * 6 + 2) * 6,
+    0 ^ (1 ^ 3)) ^ 0 * (1 * 5 + 1) + (1 * 5 + 0), 0)) ==
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, OO11lO0101l01O0OlO1O1(1,
+    2 ^ 1)), (0 * 4 + 0) * 5 + 0), ll0O1Ol0l1l01OlOlOl00(
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(56, 0 * 3 + 1 ^ (0 * 4 + 1) *
+    (0 * 5 + 3) + (0 * 4 + 0)), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO
+    (0, 1 ^ 7), 0)), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(
+    ll11O1ll01lO11Ol101OO(2, 3 ^ 1) + (0 * 3 + (0 * 3 + 1)),
+    O1OOl0l001l00l01llO00(((0 * 5 + 0) * (1 * 3 + 2) + (0 * 4 + 1)) *
+    OO11lO0101l01O0OlO1O1(5 ^ 2, 1 * 2 + 1), 0)), (0 * 4 + 0) * ((0 * 2 + 1
+    ) * 3 + (0 * 6 + 1)) + (0 * 5 + 1 ^ 0)) ^ (0 * 5 + 0 ^ 0 * 6 + 5)) == (
+    0 * 5 + 0) * (1 * 2 + 0) + (0 * 5 + 0))
+print(O1OOl0l001l00l01llO00(O1OOl0l001l00l01llO00(O1OOl0l001l00l01llO00(''.
+    join(filter(lambda OO0l00OOlO00100110O1l: ord(OO0l00OOlO00100110O1l) % 
+    4 != 0 * 6 + 0, '<lHd\x148(P(td\x00\x1cxD')).join(chr(
+    l0O11O0O0lOlOO1OO00Ol ^ lO000ll1OOO00O0O00lOl) for 
+    lO000ll1OOO00O0O00lOl, l0O11O0O0lOlOO1OO00Ol in zip(b'c\x8e\xa4\xa9',
+    b'&\xf6\xd4\xcc')), ''.join(chr(OO11lO0101l01O0OlO1O1(
+    ll0O11Ol10lO0100ll1ll, lOO1O01lOllO110lO001O)) for 
+    lOO1O01lOllO110lO001O, ll0O11Ol10lO0100ll1ll in zip(b'\xfd\xa9cl',
+    b'\x9e\xdd\x06\x08'))), ''.join(filter(lambda OllO1Oll00lO11OO0O0ll: 
+    ord(OllO1Oll00lO11OO0O0ll) % 4 != 0, 'DDX$<\x1cLX(\x08x\x18\\@h')).join
+    (filter(lambda lO101O01ll11O0l1Ol10O: ord(lO101O01ll11O0l1Ol10O) % (3 ^
+    7) != 0 * 2 + 0, '`TH\x0ct\x10L\x0c (x\x18Xx\x1c')).join(chr(
+    lOO10010l1l1Ol0l1l1O0 ^ Ol0l01OlO0l10l1lOOll1) for 
+    Ol0l01OlO0l10l1lOOll1, lOO10010l1l1Ol0l1l1O0 in zip(
+    b'\xdc\xe0\x1c\xd0 ECx`', b'\xe6\xc0H\xa2U c,\x12'))), ''.join(filter(
+    lambda OOO11lOl11l1l1l111ll1: ord(OOO11lOl11l1l1l111ll1) % (2 ^ 0 ^ 1) !=
+    0, "\x1e6Zr\x1eTil`\x15'9\x06f?")).join(chr(OO11lO0101l01O0OlO1O1(
+    l1OOO0OOl1O0O0l0O1O01, Ol0lO110l10O00O1ll00l)) for 
+    Ol0lO110l10O00O1ll00l, l1OOO0OOl1O0O0l0O1O01 in zip(
+    b'<\x18ht\x12\xf9W(\x9bG9\x96\xa1\xdc\x8f\xe2\x10\x12',
+    b'I}H `\x8c2\x08\xcf5L\xf3\x81\x88\xfd\x97u\x18'))))
+print(ll0O1Ol0l1l01OlOlOl00(0 * 6 + 0 ^ O1OOl0l001l00l01llO00((6 ^ 2 ^ 0 * 
+    4 + 0) * (0 * 6 + 5), 1 ^ 0) ^ OO11lO0101l01O0OlO1O1((0 * 4 + 1) * ((0 *
+    2 + 1) * 5 + 0) + (3 ^ 7), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(
+    0 * (0 * 4 + 2) + (0 * 5 + 1), ll11O1ll01lO11Ol101OO(1 ^ 0, 4) + 0), 0 *
+    3 + 1)), 0 * (0 * 5 + 4) + 1 ^ O1OOl0l001l00l01llO00(1 * 2, 1) ^ 
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, 6), 0) * ((0 ^ 1) * 4 +
+    (0 * 3 + 1)) + 1) == O1OOl0l001l00l01llO00((ll11O1ll01lO11Ol101OO(0, 1 ^
+    4) + (0 * 4 + 0)) * (1 ^ 3 ^ 4), 0), ll0O1Ol0l1l01OlOlOl00((2 * 2 + 0 ^
+    3 * 4 + 3) * (5 ^ 0 ^ 0) + ((0 * 5 + 2) * (1 * 2 + 0) + (0 * 2 + 0)) ^ 
+    ll11O1ll01lO11Ol101OO(2 ^ 12 ^ 1, OO11lO0101l01O0OlO1O1(5 ^ (2 ^ 0), 0 *
+    3 + 1)) + (ll11O1ll01lO11Ol101OO(0 * 2 + 1, (0 ^ 1) * 3 + (1 ^ 0)) + (0 *
+    3 + 0)), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(
+    ll11O1ll01lO11Ol101OO(0 * 4 + 0, 2 ^ 4) + 0, O1OOl0l001l00l01llO00((1 ^
+    0) * (0 * 4 + 3), 0 ^ 2)), ll11O1ll01lO11Ol101OO(0 * 6 + 0, 0 * 6 + 5) +
+    (0 * 3 + 2)), 0), (ll11O1ll01lO11Ol101OO(0, OO11lO0101l01O0OlO1O1(0 * 4 +
+    0, 2 ^ 1)) + OO11lO0101l01O0OlO1O1(1 ^ 0, 0)) * (2 ^ 1 ^
+    O1OOl0l001l00l01llO00(0 * (0 ^ 4), 0)) + OO11lO0101l01O0OlO1O1(
+    OO11lO0101l01O0OlO1O1(0, 0 * 6 + 1), ll11O1ll01lO11Ol101OO(0, 4) + (3 ^
+    0))), O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO((0 * 2 + 0) * (5 ^ 3) +
+    (0 * 3 + 0), 0 * 3 + 2), 1 ^ 0 * 4 + 0) ^ O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(0 * 2 + 0, 2 ^ 5 ^ 0 * 4 + 1),
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(1, 0 * 3 + 2), 1)))) ==
+    O1OOl0l001l00l01llO00(0 * (2 ^ 4), 0), ll0O1Ol0l1l01OlOlOl00(
+    OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0 ^
+    O1OOl0l001l00l01llO00((0 ^ 1) * (0 * 6 + 3), 0), 1 * (0 * (1 * 5 + 0) +
+    (2 ^ 0)) + ((0 * 3 + 0) * 5 + (0 * 5 + 1))), O1OOl0l001l00l01llO00((0 *
+    5 + 0) * 3, 0)), OO11lO0101l01O0OlO1O1(O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(0 ^ 5, 0 ^ 5), 1 * 3 + 2 ^ 0 * 3 + 1),
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(6 * (3 ^ 6) + (0 * 6 + 3), 
+    0 * 4 + 3), 1 * (3 ^ 1) + 0))), O1OOl0l001l00l01llO00(3 * (1 ^ 2), 2 ^ 
+    0) ^ ll11O1ll01lO11Ol101OO(0 * 5 + 1, 4) + (0 * 6 + 0)) ==
+    O1OOl0l001l00l01llO00((ll11O1ll01lO11Ol101OO(0, OO11lO0101l01O0OlO1O1(0,
+    0 ^ 1) * (0 ^ 4) + (ll11O1ll01lO11Ol101OO(0, 1 * 5 + 0) + 0)) + 0) * (0 ^
+    2 ^ 0), ll11O1ll01lO11Ol101OO(0, ll11O1ll01lO11Ol101OO(0 * 6 + 1, 3 ^ 6
+    ) + (0 * 5 + 1)) + (0 * (1 * 4 + 2) + 0)), OO11lO0101l01O0OlO1O1(
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(OO11lO0101l01O0OlO1O1(1 ^ 3,
+    O1OOl0l001l00l01llO00((3 ^ 0) * 2, 0)), 1 * 2 + 0 ^
+    OO11lO0101l01O0OlO1O1(0 * 2 + 0, 4)), 0 * 6 + 4), 54 ^ 
+    ll11O1ll01lO11Ol101OO(1 * 3 + 1, 0 * 3 + 2) + 0) %
+    OO11lO0101l01O0OlO1O1(OO11lO0101l01O0OlO1O1(0 * (1 ^ 3) + (0 * 3 + 1), 
+    2), ll11O1ll01lO11Ol101OO(0 ^ 1, O1OOl0l001l00l01llO00(0 * 5,
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(2 ^ 0, 2), 0 * 4 + 0))) + (
+    0 * 2 + 0)) == O1OOl0l001l00l01llO00((O1OOl0l001l00l01llO00(0 * 3, 0) *
+    ((0 * 6 + 1) * (0 * 6 + 4) + 2) + 0) * (7 ^ 3), 0 * 5 + 0), 
+    ll0O1Ol0l1l01OlOlOl00(ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(0, 6 ^
+    2), 0), 5 ^ 0), 0 * (1 * 5 + 1) + 3), O1OOl0l001l00l01llO00((1 ^ 0) * (
+    4 ^ 2), 0)) + O1OOl0l001l00l01llO00((0 * 5 + 1 ^ 0) * 2, 1 ^ 0), 1 * 4 +
+    1 ^ (1 ^ 0)) == ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00(
+    ll11O1ll01lO11Ol101OO(0 * 6 + 0, 2), 0 * 2 + 0), 5 ^ 0 * 6 + 3) +
+    O1OOl0l001l00l01llO00(0 * (0 * 6 + 0 ^ ll11O1ll01lO11Ol101OO(1 ^ 0, 0 *
+    4 + 3) + (0 * 4 + 1)), 0))
+print(''.join(filter(lambda lO01111l1100Oll1OOl0l: ord(
+    lO01111l1100Oll1OOl0l) % 4 != 0 * 2 + 0, ' p\x08hX\x0cH(D4\x004(L$')).
+    join(filter(lambda OOOO0l10OO000010O1Ol0: ll0O1Ol0l1l01OlOlOl00(ord(
+    OOOO0l10OO000010O1Ol0), ll11O1ll01lO11Ol101OO(1 * 2 + 0, 2 ^ 0) + 0) !=
+    0, '\x08\x10dd4,t0 \x1ct\x10xT(')).join(filter(lambda
+    lO00O0lOO11101111l00O: ord(lO00O0lOO11101111l00O) % (0 * (1 ^ 5) + (0 *
+    5 + 2)) != O1OOl0l001l00l01llO00(0 * (0 * 4 + 2), 0 * 5 + 0),
+    ',\\622<"4`jTZlrd')).join(filter(lambda OO01lO0l10O0Ol1O1l011: ord(
+    OO01lO0l10O0Ol1O1l011) % (0 ^ (0 ^ 6) ^ 0 * (3 ^ 6) + 0) !=
+    O1OOl0l001l00l01llO00(0 * (3 ^ 1), 0),
+    'N\x00r\x0c\x126`\x0c$\x0c\x00<6\x12`')).join(chr(O0Ol10O1l0O01l1O1l1ll ^
+    lOlO0O11O0100O0l1l0OO) for lOlO0O11O0100O0l1l0OO, O0Ol10O1l0O01l1O1l1ll in
+    zip(
+    b'\x1f8`g\xa2\xed~#\x85\x7f\xae\xee\xbf\n\x00\x9a[Do\xf0\xf8e\xf2\x0e\xbc~\xaaq\xbe\xa4\x80B\\s\xc5;\x04<\x15\xa0'
+    ,
+    b'Z@\x10\x02\xc1\x99\x1bG\xbf_\xe8\x8f\xd3ye\xba\x1d%\x03\x83\x9dE\xb4o\xd0\r\xcfQ\xf8\xc5\xec19S\x83ZhOp\xaa'
+    )))
+print(ll0O1Ol0l1l01OlOlOl00(''.join(filter(lambda OO01100Ol01Ol11Ol1l10: 
+    ord(OO01100Ol01Ol11Ol1l10) % 2 != 0, 'hfD6zl< l2\x1ep"v\n')).join(
+    filter(lambda lll11Ol1OOO110111l0O0: ord(lll11Ol1OOO110111l0O0) %
+    O1OOl0l001l00l01llO00(ll11O1ll01lO11Ol101OO(O1OOl0l001l00l01llO00((0 *
+    (0 * 5 + 3) + (0 * 5 + 0)) * (1 * 3 + 0), 0), ((0 * 4 + 0) * (1 * 3 + 2
+    ) + 1) * ((0 * 2 + 0) * 4 + (0 * 4 + 3)) + (0 * 3 + 2)), 0 * 5 + (0 ^ 1
+    ) ^ O1OOl0l001l00l01llO00((1 ^ 0) * 3, 0)) != 0,
+    'fj^DX.\x08\x14\x14.d4$\x14l')).join(chr(OO1OO1Ol01O0O0Ol00l01 ^
+    l01111OlO00O0101Ol1l0) for l01111OlO00O0101Ol1l0, OO1OO1Ol01O0O0Ol00l01 in
+    zip(b'\xa6+\xe0f\x98J\x08\x19\x07\n\xc8 \x06\x1b\xa8\r\xcf!',
+    b"\xf4J\x8e\x02\xf7'({~~\xad\x00oh\x92-\xeaS")), O01OOlO00O01Ol0O001l1(
+    None)))
