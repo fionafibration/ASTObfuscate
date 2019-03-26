@@ -216,7 +216,6 @@ class Obfuscator(ast.NodeTransformer):
     def visit_Num(self, node):
         obfus_type = random.randint(1, 3)
 
-
         if type(node.n) == float:
             # Obfuscate with integer ratio
             left, right = node.n.as_integer_ratio()
