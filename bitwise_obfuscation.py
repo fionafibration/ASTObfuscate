@@ -1,8 +1,15 @@
 from z3 import *
+"""
+Proves the equivalence of certain operators to highly obfuscated bitwise alternatives
+
+Uses the Z3 theorem prover:
+
+https://github.com/Z3Prover/z3
+"""
+
 
 
 BITS = 64
-
 
 def prove(equality):
     s = Solver()
