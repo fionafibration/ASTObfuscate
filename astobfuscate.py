@@ -260,48 +260,76 @@ class Obfuscator(ast.NodeTransformer):
         """
         Use a few equivalent arithmetic tricks to obfuscate certain operators, including +, -, |, &, ^, and ~
         """
+        expandable = True
+        is_int = False
 
-        if type(node.left) == Call or type(node.right) == Call:
-            # Don't do any fancy stand-ins for arithmetic operators, as function may have side-effects
-            # I.E:
-            # ord(sys.stdin.read(1)) | 0x7f
-            # Should not be refactored other than abstracting a lambda
-            pass
-        elif type(node.op) == Add and random.randint(1, 3) == 3:
-            if type(node.left) == Num and type(node.right) == Num:
-                if type(node.left.n) == int and type(node.right.n) == int:
+        for node in ast.walk(node):
+            if isinstance(node, Call):
+                expandable = False
 
-                    # Obfuscate using Mixed Binary Arithmetic
-                    # Only if we can guarantee it's an int
-                    # x + y -> (x & y) + (x | y)
-                    # x + y -> (x ^ y) + 2 * (x & y)
-                    return random.choice([BinOp(left=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitXor(), right=self.visit(copy.deepcopy(node.right))), op=Add(), right=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right))))),
+        if type(node.left) != Num or type(node.right) != Num or type(node.left.n) != int or type(node.right.n) != int:
+            is_int = True
 
-                                          BinOp(left=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right))), op=Add(), right=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitOr(), right=self.visit(copy.deepcopy(node.right))))
-                                          ])
-        """
-        elif type(node.op) == BitOr and random.randint(1, 3) == 3:
+        left_visited = self.visit(copy.deepcopy(node.left))
+
+        right_visited= self.visit(copy.deepcopy(node.left))
+
+        if type(node.op) == Add and random.randint(1, 3) == 3 and expandable and is_int:
+            # Obfuscate using Mixed Binary Arithmetic
+            # Only if we can guarantee it's an int
+            # x + y -> (x & y) + (x | y)
+            # x + y -> (x ^ y) + 2 * (x & y)
+            return random.choice([
+                                  BinOp(left=BinOp(left=left_visited, op=BitXor(), right=right_visited), op=Add(), right=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=left_visited, op=BitAnd(), right=right_visited))),
+
+                                  BinOp(left=BinOp(left=left_visited, op=BitAnd(), right=right_visited), op=Add(), right=BinOp(left=left_visited, op=BitOr(), right=right_visited))
+            ])
+
+        elif type(node.op) == Sub and random.randint(1, 3) == 3 and expandable and is_int:
+            # Sub replacements
+            # Same as addition, just with negative right hand side
+            # x - y -> (x & ~y + 1) + (x | ~y + 1)
+            # x - y -> (x ^ ~y + 1) + 2 * (x & ~y + 1)
+            return random.choice([
+                                  BinOp(left=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=left_visited, op=BitOr(), right=BinOp(left=UnaryOp(op=Invert(), operand=right_visited), op=Add(), right=Num(n=1)))), op=Sub(), right=BinOp(left=left_visited, op=BitXor(), right=BinOp(left=UnaryOp(op=Invert(), operand=right_visited), op=Add(), right=Num(n=1)))),
+
+                                  BinOp(left=BinOp(left=left_visited, op=BitOr(), right=BinOp(left=UnaryOp(op=Invert(), operand=right_visited), op=Add(), right=Num(n=1))), op=Add(), right=BinOp(left=left_visited, op=BitAnd(), right=BinOp(left=UnaryOp(op=Invert(), operand=right_visited), op=Add(), right=Num(n=1))))
+            ])
+
+        elif type(node.op) == BitOr and random.randint(1, 3) == 3 and expandable:
             # BitOr replacements:
             # x | y -> (x ^ y) | (x & y)
             # Or using NAND logic:
             # x | y -> ~(~(x & x) & ~(y & y))
             return random.choice([
-                                  BinOp(left=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitXor, right=self.visit(copy.deepcopy(node.right))), op=BitOr(), right=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right)))),
+                                  BinOp(left=BinOp(left=left_visited, op=BitXor, right=right_visited), op=BitOr(), right=BinOp(left=left_visited, op=BitAnd(), right=right_visited)),
 
-                                  UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert(), operand=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right)))), op=BitAnd(), right=UnaryOp(op=Invert(), operand=BinOp(left=self.visit(copy.deepcopy(node.right)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right))))))
-
+                                  UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert(), operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited)), op=BitAnd(), right=UnaryOp(op=Invert(), operand=BinOp(left=right_visited, op=BitAnd(), right=right_visited))))
             ])
-        elif type(node.op) == BitAnd and random.randint(1, 3) == 3:
+
+        elif type(node.op) == BitAnd and random.randint(1, 3) == 3 and expandable:
             # BitAnd replacements:
             # x & y -> (x | y) - (x ^ y)
             # Or using NAND logic:
             # x & y -> ~(~(x & y) & ~(x & y))
             return random.choice([
-                                  BinOp(left=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitOr(), right=self.visit(copy.deepcopy(node.right))), op=Sub(), right=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitXor(), right=self.visit(copy.deepcopy(node.right)))),
+                                  BinOp(left=BinOp(left=left_visited, op=BitOr(), right=right_visited), op=Sub(), right=BinOp(left=left_visited, op=BitXor(), right=right_visited)),
 
-                                  UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert, operand=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right)))), op=And(), right=UnaryOp(op=Invert, operand=BinOp(left=self.visit(copy.deepcopy(node.left)), op=BitAnd(), right=self.visit(copy.deepcopy(node.right))))))
+                                  UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert, operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited)), op=And(), right=UnaryOp(op=Invert, operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited))))
             ])
-        """
+
+        elif type(node.op) == BitXor and random.randint(1, 2) == 2 and expandable:
+            # BitXor replacements:
+            # x ^ y -> x - y + 2 * (~x & y)
+            # x ^ y -> ~(x & y) & ~(~x & ~y)
+            # x ^ y -> (~x & y) | (x & ~y)
+            return random.choice([
+                                  BinOp(left=BinOp(left=left_visited, op=Sub(), right=right_visited), op=Add(), right=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=UnaryOp(op=Invert(), operand=left_visited), op=BitAnd(), right=right_visited))),
+
+                                  BinOp(left=UnaryOp(op=Invert(), operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited)), op=BitAnd(), right=UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert(), operand=left_visited), op=BitAnd(), right=UnaryOp(op=Invert(), operand=right_visited)))),
+
+                                  BinOp(left=BinOp(left=UnaryOp(op=Invert(), operand=left_visited), op=BitAnd(), right=right_visited), op=BitOr(), right=BinOp(left=left_visited, op=BitAnd(), right=UnaryOp(op=Invert(), operand=right_visited)))
+            ])
 
         # Visit our left and right
         node.left = self.visit(node.left)
