@@ -37,17 +37,6 @@ def import_node(name, newname, froms=None):
 def obfuscate_binary(operator, newname):
     arg1 = random_string(20, 20)
     arg2 = random_string(20, 20)
-    """# Return an operator obfuscated using Mixed Boolean Arithmetic
-    if operator == Add:
-        return random.choice([Assign(targets=[Name(newname, ctx=Store())],
-                                     value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
-                                                  body=BinOp(left=BinOp(left=Name(id=arg1, ctx=Load()), op=BitXor(), right=Name(id=arg2, ctx=Load())), op=Add(), right=BinOp(left=Num(n=2), op=Mult(), right=BinOp(left=Name(id=arg1, ctx=Load()), op=BitAnd(), right=Name(id=arg2, ctx=Load())))))),
-
-                              Assign(targets=[Name(newname, ctx=Store())],
-                                     value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
-                                                  body=BinOp(left=BinOp(left=Name(id=arg1, ctx=Load()), op=BitAnd(), right=Name(id=arg2, ctx=Load())), op=Add(), right=BinOp(left=Name(id=arg1, ctx=Load()), op=BitOr(), right=Name(id=arg2, ctx=Load())))))
-                              ])
-    """
     return Assign(targets=[Name(id=newname, ctx=Store())],
                   value=Lambda(args=arguments(args=[arg(arg=arg1, annotation=None), arg(arg=arg2, annotation=None)], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
                                body=BinOp(left=Name(id=arg1, ctx=Load()), op=operator(), right=Name(id=arg2, ctx=Load()))))
@@ -223,7 +212,7 @@ class Obfuscator(ast.NodeTransformer):
 
         if obfus_type == 1:
             # 7 to (2 * 3) + 1 or likewise with another divisor
-            d = random.randint(2, 6)
+            d = random.randint(2, 16)
             return BinOp(left=BinOp(left=Num(node.n // d), op=Mult(),
                                     right=Num(n=d)),
                          op=Add(), right=Num(node.n % d))
@@ -261,20 +250,20 @@ class Obfuscator(ast.NodeTransformer):
         Use a few equivalent arithmetic tricks to obfuscate certain operators, including +, -, |, &, ^, and ~
         """
         expandable = True
-        is_int = False
+        is_int = True
 
-        for node in ast.walk(node):
-            if isinstance(node, Call):
+        for candidate_node in ast.walk(node):
+            if isinstance(candidate_node, Call):
                 expandable = False
 
         if type(node.left) != Num or type(node.right) != Num or type(node.left.n) != int or type(node.right.n) != int:
-            is_int = True
+            is_int = False
 
         left_visited = self.visit(copy.deepcopy(node.left))
 
-        right_visited= self.visit(copy.deepcopy(node.left))
+        right_visited = self.visit(copy.deepcopy(node.right))
 
-        if type(node.op) == Add and random.randint(1, 3) == 3 and expandable and is_int:
+        if type(node.op) == Add and random.randint(1, 10) == 1 and expandable and is_int:
             # Obfuscate using Mixed Binary Arithmetic
             # Only if we can guarantee it's an int
             # x + y -> (x & y) + (x | y)
@@ -285,7 +274,7 @@ class Obfuscator(ast.NodeTransformer):
                                   BinOp(left=BinOp(left=left_visited, op=BitAnd(), right=right_visited), op=Add(), right=BinOp(left=left_visited, op=BitOr(), right=right_visited))
             ])
 
-        elif type(node.op) == Sub and random.randint(1, 3) == 3 and expandable and is_int:
+        elif type(node.op) == Sub and random.randint(1, 10) == 1 and expandable and is_int:
             # Sub replacements
             # Same as addition, just with negative right hand side
             # x - y -> (x & ~y + 1) + (x | ~y + 1)
@@ -296,18 +285,18 @@ class Obfuscator(ast.NodeTransformer):
                                   BinOp(left=BinOp(left=left_visited, op=BitOr(), right=BinOp(left=UnaryOp(op=Invert(), operand=right_visited), op=Add(), right=Num(n=1))), op=Add(), right=BinOp(left=left_visited, op=BitAnd(), right=BinOp(left=UnaryOp(op=Invert(), operand=right_visited), op=Add(), right=Num(n=1))))
             ])
 
-        elif type(node.op) == BitOr and random.randint(1, 3) == 3 and expandable:
+        elif type(node.op) == BitOr and random.randint(1, 10) == 1 and expandable:
             # BitOr replacements:
             # x | y -> (x ^ y) | (x & y)
             # Or using NAND logic:
             # x | y -> ~(~(x & x) & ~(y & y))
             return random.choice([
-                                  BinOp(left=BinOp(left=left_visited, op=BitXor, right=right_visited), op=BitOr(), right=BinOp(left=left_visited, op=BitAnd(), right=right_visited)),
+                                  BinOp(left=BinOp(left=left_visited, op=BitXor(), right=right_visited), op=BitOr(), right=BinOp(left=left_visited, op=BitAnd(), right=right_visited)),
 
                                   UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert(), operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited)), op=BitAnd(), right=UnaryOp(op=Invert(), operand=BinOp(left=right_visited, op=BitAnd(), right=right_visited))))
             ])
 
-        elif type(node.op) == BitAnd and random.randint(1, 3) == 3 and expandable:
+        elif type(node.op) == BitAnd and random.randint(1, 10) == 1 and expandable:
             # BitAnd replacements:
             # x & y -> (x | y) - (x ^ y)
             # Or using NAND logic:
@@ -315,10 +304,10 @@ class Obfuscator(ast.NodeTransformer):
             return random.choice([
                                   BinOp(left=BinOp(left=left_visited, op=BitOr(), right=right_visited), op=Sub(), right=BinOp(left=left_visited, op=BitXor(), right=right_visited)),
 
-                                  UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert, operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited)), op=And(), right=UnaryOp(op=Invert, operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited))))
+                                  UnaryOp(op=Invert(), operand=BinOp(left=UnaryOp(op=Invert(), operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited)), op=And(), right=UnaryOp(op=Invert(), operand=BinOp(left=left_visited, op=BitAnd(), right=right_visited))))
             ])
 
-        elif type(node.op) == BitXor and random.randint(1, 2) == 2 and expandable:
+        elif type(node.op) == BitXor and random.randint(1, 10) == 1 and expandable:
             # BitXor replacements:
             # x ^ y -> x - y + 2 * (~x & y)
             # x ^ y -> ~(x & y) & ~(~x & ~y)
@@ -331,10 +320,6 @@ class Obfuscator(ast.NodeTransformer):
                                   BinOp(left=BinOp(left=UnaryOp(op=Invert(), operand=left_visited), op=BitAnd(), right=right_visited), op=BitOr(), right=BinOp(left=left_visited, op=BitAnd(), right=UnaryOp(op=Invert(), operand=right_visited)))
             ])
 
-        # Visit our left and right
-        node.left = self.visit(node.left)
-        node.right = self.visit(node.right)
-
         # Make a lambda expression for the operator, and have a 1/4 chance of using it
         # This lambda definition will be stuck right at the top of the file in the visit_Module() function
         try:
@@ -343,10 +328,14 @@ class Obfuscator(ast.NodeTransformer):
                 self.binary_operators[type(node.op)] = newname
             if random.randint(1, 4) == 1:
                 name = self.binary_operators[type(node.op)]
-                return Call(func=Name(self.globs.get(name, name), ctx=Load()), args=[node.left, node.right], keywords=[])
+                return Call(func=Name(self.globs.get(name, name), ctx=Load()), args=[left_visited, right_visited], keywords=[])
             else:
+                node.left = left_visited
+                node.right = right_visited
                 return node
         except:
+            node.left = left_visited
+            node.right = right_visited
             return node
 
     def visit_UnaryOp(self, node):
@@ -445,6 +434,37 @@ class Obfuscator(ast.NodeTransformer):
 
         # Visit the function body, possibly recursing into another definition
         node.body = [self.visit(x) for x in node.body]
+
+        # Handle nested function defs
+        if not already_indef:
+            self.indef = False
+
+        # Remove our function namespace
+        self.locs.pop(0)
+        return node
+
+    def visit_Lambda(self, node):
+        # Test to see if there's a keyword-only argument specifying that we shouldn't
+        # Obfuscate the name and arguments
+        no_obfuscate = 'ast_no_obfuscate' in [arg.arg for arg in node.args.kwonlyargs]
+
+        # If we're already in a function definition make sure we don't close out of it
+        if self.indef == True:
+            already_indef = True
+        else:
+            already_indef = False
+        self.indef = True
+
+        # Add a new local namespace for this function
+        self.locs.insert(0, {})
+
+        # If we haven't already renamed stuff, do that
+        if not self.renamed:
+            for arg in node.args.args:
+                arg.arg = self.obfuscate_local(arg.arg)
+
+        # Visit the function body, possibly recursing into another definition
+        node.body = self.visit(node.body)
 
         # Handle nested function defs
         if not already_indef:

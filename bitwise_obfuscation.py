@@ -7,8 +7,6 @@ Uses the Z3 theorem prover:
 https://github.com/Z3Prover/z3
 """
 
-
-
 BITS = 64
 
 def prove(equality):
@@ -48,3 +46,15 @@ proofs = [
 assert(all([prove(proof) for proof in proofs]))
 
 print('Proved all equalities!')
+
+# Addition through bitwise and recursion
+# XOR finds places that add to 1, AND and bitshift is the carry.
+# Y combinator is used to recurively move the carry until the addition is done.
+
+add = lambda a, b: (lambda f, a, b: f(f, a, b))(lambda f, a, b: f(f, a ^ b, (a & b) << 1) if b else a, a, b)
+
+for i in range(129):
+    for j in range(129):
+        assert add(i, j) == i + j
+
+print('Proved obfuscated recursive addition function!')
